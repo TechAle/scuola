@@ -1,0 +1,6 @@
+/Users/alessandro/Projects/seriearmonica/seriearmonica/bin/Debug/seriearmonica.exe
+/Users/alessandro/Projects/seriearmonica/seriearmonica/bin/Debug/seriearmonica.pdb
+/Users/alessandro/Projects/seriearmonica/seriearmonica/obj/Debug/seriearmonica.csprojAssemblyReference.cache
+/Users/alessandro/Projects/seriearmonica/seriearmonica/obj/Debug/seriearmonica.csproj.CoreCompileInputs.cache
+/Users/alessandro/Projects/seriearmonica/seriearmonica/obj/Debug/seriearmonica.exe
+/Users/alessandro/Projects/seriearmonica/seriearmonica/obj/Debug/seriearmonica.pdb

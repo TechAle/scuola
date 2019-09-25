@@ -42,7 +42,8 @@ int main()
         {
             // row count
             if(mom == 0)
-            
+            	// ex : 00 - 01 - 02 - 03 -> max + min stamp + reset 
+            	// after: 10 - 11 - 12 - 13
                 if (var_r < 2)
                 
                     var_r++;

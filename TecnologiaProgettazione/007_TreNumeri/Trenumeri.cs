@@ -1,10 +1,19 @@
+/*
+       File: TreNumeri.cs
+       Autore: Condello Alessandro
+       Matricola: 11465
+       A.S. 2019-2020
+       Ultima modifica: 20/09/2019
+       Descrizione  Scrivere un programma che, richiesti in input tre numeri interi, visualizzi a seconda dei
+                    casi una delle seguenti risposte:
+*/
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Media
+namespace TreNumeri_
 {
 	class Program
 	{

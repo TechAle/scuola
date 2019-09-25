@@ -1,4 +1,13 @@
-﻿using System;
+﻿/*
+       File: Media1.cs
+       Autore: Condello Alessandro
+       Matricola: 11465
+       A.S. 2019-2020
+       Ultima modifica: 20/09/2019
+       Descrizione  Scrivere un programma che calcoli e visualizzi la media di n numero interi immessi
+                    dall'utente.
+*/
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;

@@ -1,0 +1,6 @@
+/Users/alessandro/Projects/equazione1g/equazione1g/bin/Debug/equazione1g.exe
+/Users/alessandro/Projects/equazione1g/equazione1g/bin/Debug/equazione1g.pdb
+/Users/alessandro/Projects/equazione1g/equazione1g/obj/Debug/equazione1g.csprojAssemblyReference.cache
+/Users/alessandro/Projects/equazione1g/equazione1g/obj/Debug/equazione1g.csproj.CoreCompileInputs.cache
+/Users/alessandro/Projects/equazione1g/equazione1g/obj/Debug/equazione1g.exe
+/Users/alessandro/Projects/equazione1g/equazione1g/obj/Debug/equazione1g.pdb

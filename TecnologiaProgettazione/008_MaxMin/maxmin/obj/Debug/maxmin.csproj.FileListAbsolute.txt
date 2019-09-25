@@ -1,0 +1,6 @@
+/Users/alessandro/Projects/maxmin/maxmin/bin/Debug/maxmin.exe
+/Users/alessandro/Projects/maxmin/maxmin/bin/Debug/maxmin.pdb
+/Users/alessandro/Projects/maxmin/maxmin/obj/Debug/maxmin.csprojAssemblyReference.cache
+/Users/alessandro/Projects/maxmin/maxmin/obj/Debug/maxmin.csproj.CoreCompileInputs.cache
+/Users/alessandro/Projects/maxmin/maxmin/obj/Debug/maxmin.exe
+/Users/alessandro/Projects/maxmin/maxmin/obj/Debug/maxmin.pdb

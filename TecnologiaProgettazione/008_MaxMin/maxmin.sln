@@ -1,0 +1,17 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "maxmin", "maxmin\maxmin.csproj", "{2B62D69A-0351-4D53-959C-6137563C68DC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|anycpu = Debug|anycpu
+		Release|anycpu = Release|anycpu
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2B62D69A-0351-4D53-959C-6137563C68DC}.Debug|anycpu.ActiveCfg = Debug|anycpu
+		{2B62D69A-0351-4D53-959C-6137563C68DC}.Debug|anycpu.Build.0 = Debug|anycpu
+		{2B62D69A-0351-4D53-959C-6137563C68DC}.Release|anycpu.ActiveCfg = Release|anycpu
+		{2B62D69A-0351-4D53-959C-6137563C68DC}.Release|anycpu.Build.0 = Release|anycpu
+	EndGlobalSection
+EndGlobal
