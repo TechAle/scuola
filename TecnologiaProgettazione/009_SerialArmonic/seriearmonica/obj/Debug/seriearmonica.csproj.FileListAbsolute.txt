@@ -4,3 +4,10 @@
 /Users/alessandro/Projects/seriearmonica/seriearmonica/obj/Debug/seriearmonica.csproj.CoreCompileInputs.cache
 /Users/alessandro/Projects/seriearmonica/seriearmonica/obj/Debug/seriearmonica.exe
 /Users/alessandro/Projects/seriearmonica/seriearmonica/obj/Debug/seriearmonica.pdb
+G:\2019-2020\TecnologiaProgettazione\009_SerialArmonic\seriearmonica\bin\Debug\seriearmonica.exe.config
+G:\2019-2020\TecnologiaProgettazione\009_SerialArmonic\seriearmonica\bin\Debug\seriearmonica.exe
+G:\2019-2020\TecnologiaProgettazione\009_SerialArmonic\seriearmonica\bin\Debug\seriearmonica.pdb
+G:\2019-2020\TecnologiaProgettazione\009_SerialArmonic\seriearmonica\obj\Debug\seriearmonica.csprojAssemblyReference.cache
+G:\2019-2020\TecnologiaProgettazione\009_SerialArmonic\seriearmonica\obj\Debug\seriearmonica.csproj.CoreCompileInputs.cache
+G:\2019-2020\TecnologiaProgettazione\009_SerialArmonic\seriearmonica\obj\Debug\seriearmonica.exe
+G:\2019-2020\TecnologiaProgettazione\009_SerialArmonic\seriearmonica\obj\Debug\seriearmonica.pdb

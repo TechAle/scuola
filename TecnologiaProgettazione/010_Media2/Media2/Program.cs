@@ -18,6 +18,7 @@ namespace Media2
 			/// Variables ///
 			int choose,
 				i;
+            // modifica poi in intero e aggiungere npari e ndispari, e poi nell'output fa un cast
 			float MediaP,
 				  MediaS,
 				  nChoose;

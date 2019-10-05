@@ -1,6 +1,7 @@
-
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
+VisualStudioVersion = 15.0.28307.705
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Media2", "Media2\Media2.csproj", "{3985A341-FBAA-48CD-A043-93E131CD4DD1}"
 EndProject
 Global
@@ -9,9 +10,15 @@ Global
 		Release|anycpu = Release|anycpu
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{3985A341-FBAA-48CD-A043-93E131CD4DD1}.Debug|anycpu.ActiveCfg = Debug|anycpu
-		{3985A341-FBAA-48CD-A043-93E131CD4DD1}.Debug|anycpu.Build.0 = Debug|anycpu
-		{3985A341-FBAA-48CD-A043-93E131CD4DD1}.Release|anycpu.ActiveCfg = Release|anycpu
-		{3985A341-FBAA-48CD-A043-93E131CD4DD1}.Release|anycpu.Build.0 = Release|anycpu
+		{3985A341-FBAA-48CD-A043-93E131CD4DD1}.Debug|anycpu.ActiveCfg = Debug|Any CPU
+		{3985A341-FBAA-48CD-A043-93E131CD4DD1}.Debug|anycpu.Build.0 = Debug|Any CPU
+		{3985A341-FBAA-48CD-A043-93E131CD4DD1}.Release|anycpu.ActiveCfg = Release|Any CPU
+		{3985A341-FBAA-48CD-A043-93E131CD4DD1}.Release|anycpu.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D6BD94E8-1BAE-40D1-865F-E7E762DB8B15}
 	EndGlobalSection
 EndGlobal

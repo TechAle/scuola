@@ -1,0 +1,13 @@
+/Users/alessandro/Projects/numprimo/numprimo/bin/Debug/numprimo.exe
+/Users/alessandro/Projects/numprimo/numprimo/bin/Debug/numprimo.pdb
+/Users/alessandro/Projects/numprimo/numprimo/obj/Debug/numprimo.csprojAssemblyReference.cache
+/Users/alessandro/Projects/numprimo/numprimo/obj/Debug/numprimo.csproj.CoreCompileInputs.cache
+/Users/alessandro/Projects/numprimo/numprimo/obj/Debug/numprimo.exe
+/Users/alessandro/Projects/numprimo/numprimo/obj/Debug/numprimo.pdb
+F:\2019-2020\TecnologiaProgettazione\014_Numprimo\numprimo\bin\Debug\numprimo.exe.config
+F:\2019-2020\TecnologiaProgettazione\014_Numprimo\numprimo\bin\Debug\numprimo.exe
+F:\2019-2020\TecnologiaProgettazione\014_Numprimo\numprimo\bin\Debug\numprimo.pdb
+F:\2019-2020\TecnologiaProgettazione\014_Numprimo\numprimo\obj\Debug\numprimo.csprojAssemblyReference.cache
+F:\2019-2020\TecnologiaProgettazione\014_Numprimo\numprimo\obj\Debug\numprimo.csproj.CoreCompileInputs.cache
+F:\2019-2020\TecnologiaProgettazione\014_Numprimo\numprimo\obj\Debug\numprimo.exe
+F:\2019-2020\TecnologiaProgettazione\014_Numprimo\numprimo\obj\Debug\numprimo.pdb

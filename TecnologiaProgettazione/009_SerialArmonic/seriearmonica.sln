@@ -1,6 +1,7 @@
-
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
+VisualStudioVersion = 15.0.28307.705
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "seriearmonica", "seriearmonica\seriearmonica.csproj", "{407112E7-0C0B-4161-B403-5B60FED7D672}"
 EndProject
 Global
@@ -9,9 +10,15 @@ Global
 		Release|anycpu = Release|anycpu
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{407112E7-0C0B-4161-B403-5B60FED7D672}.Debug|anycpu.ActiveCfg = Debug|anycpu
-		{407112E7-0C0B-4161-B403-5B60FED7D672}.Debug|anycpu.Build.0 = Debug|anycpu
-		{407112E7-0C0B-4161-B403-5B60FED7D672}.Release|anycpu.ActiveCfg = Release|anycpu
-		{407112E7-0C0B-4161-B403-5B60FED7D672}.Release|anycpu.Build.0 = Release|anycpu
+		{407112E7-0C0B-4161-B403-5B60FED7D672}.Debug|anycpu.ActiveCfg = Debug|Any CPU
+		{407112E7-0C0B-4161-B403-5B60FED7D672}.Debug|anycpu.Build.0 = Debug|Any CPU
+		{407112E7-0C0B-4161-B403-5B60FED7D672}.Release|anycpu.ActiveCfg = Release|Any CPU
+		{407112E7-0C0B-4161-B403-5B60FED7D672}.Release|anycpu.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F6471E28-8CB9-4289-B2CA-C3259A29FEB4}
 	EndGlobalSection
 EndGlobal

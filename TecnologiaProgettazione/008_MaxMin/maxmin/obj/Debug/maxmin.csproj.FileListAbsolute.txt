@@ -4,3 +4,7 @@
 /Users/alessandro/Projects/maxmin/maxmin/obj/Debug/maxmin.csproj.CoreCompileInputs.cache
 /Users/alessandro/Projects/maxmin/maxmin/obj/Debug/maxmin.exe
 /Users/alessandro/Projects/maxmin/maxmin/obj/Debug/maxmin.pdb
+F:\2019-2020\TecnologiaProgettazione\008_MaxMin\maxmin\obj\Debug\maxmin.csprojAssemblyReference.cache
+F:\2019-2020\TecnologiaProgettazione\008_MaxMin\maxmin\obj\Debug\maxmin.csproj.CoreCompileInputs.cache
+F:\2019-2020\TecnologiaProgettazione\008_MaxMin\maxmin\obj\Debug\maxmin.exe
+F:\2019-2020\TecnologiaProgettazione\008_MaxMin\maxmin\obj\Debug\maxmin.pdb

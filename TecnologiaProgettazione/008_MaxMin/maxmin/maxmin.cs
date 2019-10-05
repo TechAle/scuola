@@ -19,8 +19,8 @@ namespace maxmin
 			int n,
 				i,
 				number,
-				max = 0,
-				min = 0;
+				max = int.MinValue,
+				min = int.MaxValue;
 			/// inputs ///
 			// input n for choose the mumber of numbers for make max and min
 			Console.WriteLine("insert the number of numbers you want");
@@ -32,29 +32,19 @@ namespace maxmin
 				Console.WriteLine("insert {0} number", i+1);
 				number = Convert.ToInt32(Console.ReadLine());
 				/// processing numbers to obtain min and max ///
-				// if it's the first time that is in the loop
-				if (i == 0)
-				{
-					// set min and max = number
-					min = max = number;
-				}
-				// else controll the min and max
+				if (number > max)
+					max = number;
 				else
+				// controll if number is > of min, if yes max number max
+				if (number < min)
 				{
-					// controll if number is > of max, if yes max number max
-					if (number > max)
-						max = number;
-					else
-					// controll if number is > of min, if yes max number max
-					if (number < min)
-					{
-						min = number;
-					}
-
+					min = number;
 				}
+
+				
 			}
 			/// output
-			Console.Write("the min is {0} and the max is {1}", min, max);
+			Console.Write("the min is {0}\nmax is {1}", min, max);
 		}
 	}
 }

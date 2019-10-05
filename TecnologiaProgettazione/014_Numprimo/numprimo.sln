@@ -1,0 +1,24 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.705
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "numprimo", "numprimo\numprimo.csproj", "{E7885922-D995-4114-A42A-C17F7A4BCA30}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|anycpu = Debug|anycpu
+		Release|anycpu = Release|anycpu
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E7885922-D995-4114-A42A-C17F7A4BCA30}.Debug|anycpu.ActiveCfg = Debug|Any CPU
+		{E7885922-D995-4114-A42A-C17F7A4BCA30}.Debug|anycpu.Build.0 = Debug|Any CPU
+		{E7885922-D995-4114-A42A-C17F7A4BCA30}.Release|anycpu.ActiveCfg = Release|Any CPU
+		{E7885922-D995-4114-A42A-C17F7A4BCA30}.Release|anycpu.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {03CA16CF-B1DD-4DB0-B3AE-1B4492CFEE71}
+	EndGlobalSection
+EndGlobal

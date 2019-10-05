@@ -17,18 +17,23 @@ namespace idraulico
 	{
 		public static void Main(string[] args)
 		{
+            const double forH = 40.0;       // Costo orario ( Euro )
+            const double dMin = 100.0;      // Importo minimo da pagare ( Euro )
 			/// variables ///
-			float	costo,
-					forH = 40,
-					Dmin = 100,
-					h;
+           
+			double	costoMateriale, h, costoFinale;
 			/// inputs ///
-			Console.WriteLine("inserire il costo dei materiali ");
-			costo = Convert.ToSingle(Console.ReadLine());
-			Console.WriteLine("inserire le ore ");
-			h = Convert.ToSingle(Console.ReadLine());
+			Console.Write("Costo dei materiali ( Euro ): ");
+			costoMateriale = Convert.ToDouble(Console.ReadLine());
+			Console.Write("Numero di ore: ");
+			h = Convert.ToDouble(Console.ReadLine());
+            // Elaborazione dati
+            costoFinale = costoMateriale + h * forH;
+            if (costoFinale < dMin)
+                costoFinale = dMin;
+
 			/// output ///
-			Console.WriteLine("il costo finale e {0}", Dmin + costo + h * forH);
+			Console.WriteLine("Costo finale: {0:N2} Euro", costoFinale);
 		}
 	}
 }

@@ -1,0 +1,6 @@
+/Users/alessandro/Projects/cap/cap/bin/Debug/cap.exe
+/Users/alessandro/Projects/cap/cap/bin/Debug/cap.pdb
+/Users/alessandro/Projects/cap/cap/obj/Debug/cap.csprojAssemblyReference.cache
+/Users/alessandro/Projects/cap/cap/obj/Debug/cap.csproj.CoreCompileInputs.cache
+/Users/alessandro/Projects/cap/cap/obj/Debug/cap.exe
+/Users/alessandro/Projects/cap/cap/obj/Debug/cap.pdb

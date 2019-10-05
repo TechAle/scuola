@@ -1,0 +1,7 @@
+G:\2019-2020\TecnologiaProgettazione\012_Idraulico\idraulico\bin\Debug\idraulico.exe.config
+G:\2019-2020\TecnologiaProgettazione\012_Idraulico\idraulico\bin\Debug\idraulico.exe
+G:\2019-2020\TecnologiaProgettazione\012_Idraulico\idraulico\bin\Debug\idraulico.pdb
+G:\2019-2020\TecnologiaProgettazione\012_Idraulico\idraulico\obj\Debug\idraulico.csprojAssemblyReference.cache
+G:\2019-2020\TecnologiaProgettazione\012_Idraulico\idraulico\obj\Debug\idraulico.csproj.CoreCompileInputs.cache
+G:\2019-2020\TecnologiaProgettazione\012_Idraulico\idraulico\obj\Debug\idraulico.exe
+G:\2019-2020\TecnologiaProgettazione\012_Idraulico\idraulico\obj\Debug\idraulico.pdb

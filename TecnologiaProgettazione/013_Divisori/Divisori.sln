@@ -1,0 +1,24 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.705
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Divisori", "Divisori\Divisori.csproj", "{C1C73071-15B7-403C-9C2B-249BF91A4692}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|anycpu = Debug|anycpu
+		Release|anycpu = Release|anycpu
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C1C73071-15B7-403C-9C2B-249BF91A4692}.Debug|anycpu.ActiveCfg = Debug|Any CPU
+		{C1C73071-15B7-403C-9C2B-249BF91A4692}.Debug|anycpu.Build.0 = Debug|Any CPU
+		{C1C73071-15B7-403C-9C2B-249BF91A4692}.Release|anycpu.ActiveCfg = Release|Any CPU
+		{C1C73071-15B7-403C-9C2B-249BF91A4692}.Release|anycpu.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7B4002E1-5403-40EE-A37F-3AD2EEFB4857}
+	EndGlobalSection
+EndGlobal

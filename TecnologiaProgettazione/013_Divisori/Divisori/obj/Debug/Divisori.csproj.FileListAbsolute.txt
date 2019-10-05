@@ -1,0 +1,6 @@
+/Users/alessandro/Projects/Divisori/Divisori/bin/Debug/Divisori.exe
+/Users/alessandro/Projects/Divisori/Divisori/bin/Debug/Divisori.pdb
+/Users/alessandro/Projects/Divisori/Divisori/obj/Debug/Divisori.csprojAssemblyReference.cache
+/Users/alessandro/Projects/Divisori/Divisori/obj/Debug/Divisori.csproj.CoreCompileInputs.cache
+/Users/alessandro/Projects/Divisori/Divisori/obj/Debug/Divisori.exe
+/Users/alessandro/Projects/Divisori/Divisori/obj/Debug/Divisori.pdb

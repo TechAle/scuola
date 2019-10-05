@@ -1,6 +1,7 @@
-
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
+VisualStudioVersion = 15.0.28307.705
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "idraulico", "idraulico\idraulico.csproj", "{E823A6DA-FE17-407C-AA6F-E9A82FF06573}"
 EndProject
 Global
@@ -9,9 +10,15 @@ Global
 		Release|anycpu = Release|anycpu
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{E823A6DA-FE17-407C-AA6F-E9A82FF06573}.Debug|anycpu.ActiveCfg = Debug|anycpu
-		{E823A6DA-FE17-407C-AA6F-E9A82FF06573}.Debug|anycpu.Build.0 = Debug|anycpu
-		{E823A6DA-FE17-407C-AA6F-E9A82FF06573}.Release|anycpu.ActiveCfg = Release|anycpu
-		{E823A6DA-FE17-407C-AA6F-E9A82FF06573}.Release|anycpu.Build.0 = Release|anycpu
+		{E823A6DA-FE17-407C-AA6F-E9A82FF06573}.Debug|anycpu.ActiveCfg = Debug|Any CPU
+		{E823A6DA-FE17-407C-AA6F-E9A82FF06573}.Debug|anycpu.Build.0 = Debug|Any CPU
+		{E823A6DA-FE17-407C-AA6F-E9A82FF06573}.Release|anycpu.ActiveCfg = Release|Any CPU
+		{E823A6DA-FE17-407C-AA6F-E9A82FF06573}.Release|anycpu.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {56A0B808-545A-4C8B-B6E8-8AE5AD08A77D}
 	EndGlobalSection
 EndGlobal
