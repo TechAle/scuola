@@ -1,0 +1,17 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Es1_Classroom_Iterazione_", "Es1_Classroom_Iterazione_\Es1_Classroom_Iterazione_.csproj", "{DA9E927B-C1DF-4A0D-8CFC-8A435CC93AFA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|anycpu = Debug|anycpu
+		Release|anycpu = Release|anycpu
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DA9E927B-C1DF-4A0D-8CFC-8A435CC93AFA}.Debug|anycpu.ActiveCfg = Debug|anycpu
+		{DA9E927B-C1DF-4A0D-8CFC-8A435CC93AFA}.Debug|anycpu.Build.0 = Debug|anycpu
+		{DA9E927B-C1DF-4A0D-8CFC-8A435CC93AFA}.Release|anycpu.ActiveCfg = Release|anycpu
+		{DA9E927B-C1DF-4A0D-8CFC-8A435CC93AFA}.Release|anycpu.Build.0 = Release|anycpu
+	EndGlobalSection
+EndGlobal

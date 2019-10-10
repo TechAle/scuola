@@ -12,9 +12,14 @@
 */
 #include <stdio.h>
 #define N 5
-void rich(int vet[], int len_);
 
-void rich(int vet[], int len)
+int vet[N];
+int x;
+
+void rich(int len_);
+int ricerca(int len);
+
+void rich(int len)
 {
 	int i;
 	for(i = 0; i < len ; i++)
@@ -24,11 +29,33 @@ void rich(int vet[], int len)
 	}
 }
 
+int ricerca(int len)
+{
+	int i = 0,
+		trov = 0;
+	do
+	{
+		if ( vet[i] == x )
+			trov++;
+		else
+			i++;
+	}while(i < len && !trov);
+	if(trov)
+		return i;
+	else
+		return -1;
+}
 
 int main()
 {
-	int vet[N];
-	rich(vet,N)
+	rich(N);
+	printf("Incognita: ");
+	scanf("%d",&x);
+	int ris = ricerca(N);
+	if ( ris == -1)
+		printf("Incognita non trovata");
+	else
+		printf("Incognita trovata a posizione %d",ris);
 }
 
 

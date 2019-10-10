@@ -1,0 +1,25 @@
+﻿<Properties StartupConfiguration="{DA9E927B-C1DF-4A0D-8CFC-8A435CC93AFA}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Es1_Classroom_Iterazione_/Program.cs">
+    <Files>
+      <File FileName="Es1_Classroom_Iterazione_/Program.cs" Line="1" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Es1_Classroom_Iterazione_" expanded="True">
+            <Node name="Es1_Classroom_Iterazione_" expanded="True">
+              <Node name="Program.cs" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|anycpu" />
+  <MonoDevelop.Ide.ItemProperties.Es1__Classroom__Iterazione__ FirstBuild="True" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

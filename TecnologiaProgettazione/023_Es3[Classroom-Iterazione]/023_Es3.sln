@@ -1,0 +1,17 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "023_Es3", "023_Es3\023_Es3.csproj", "{DE37C478-A285-49D1-8F4F-5D04070AD1BB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|anycpu = Debug|anycpu
+		Release|anycpu = Release|anycpu
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DE37C478-A285-49D1-8F4F-5D04070AD1BB}.Debug|anycpu.ActiveCfg = Debug|anycpu
+		{DE37C478-A285-49D1-8F4F-5D04070AD1BB}.Debug|anycpu.Build.0 = Debug|anycpu
+		{DE37C478-A285-49D1-8F4F-5D04070AD1BB}.Release|anycpu.ActiveCfg = Release|anycpu
+		{DE37C478-A285-49D1-8F4F-5D04070AD1BB}.Release|anycpu.Build.0 = Release|anycpu
+	EndGlobalSection
+EndGlobal
