@@ -1,0 +1,14 @@
+C:\Users\11465\source\repos\Esercizio1[Classroom-Vettori]\Esercizio1[Classroom-Vettori]\bin\Debug\Esercizio1[Classroom-Vettori].exe.config
+C:\Users\11465\source\repos\Esercizio1[Classroom-Vettori]\Esercizio1[Classroom-Vettori]\bin\Debug\Esercizio1[Classroom-Vettori].exe
+C:\Users\11465\source\repos\Esercizio1[Classroom-Vettori]\Esercizio1[Classroom-Vettori]\bin\Debug\Esercizio1[Classroom-Vettori].pdb
+C:\Users\11465\source\repos\Esercizio1[Classroom-Vettori]\Esercizio1[Classroom-Vettori]\obj\Debug\Esercizio1[Classroom-Vettori].csprojAssemblyReference.cache
+C:\Users\11465\source\repos\Esercizio1[Classroom-Vettori]\Esercizio1[Classroom-Vettori]\obj\Debug\Esercizio1[Classroom-Vettori].csproj.CoreCompileInputs.cache
+C:\Users\11465\source\repos\Esercizio1[Classroom-Vettori]\Esercizio1[Classroom-Vettori]\obj\Debug\Esercizio1[Classroom-Vettori].exe
+C:\Users\11465\source\repos\Esercizio1[Classroom-Vettori]\Esercizio1[Classroom-Vettori]\obj\Debug\Esercizio1[Classroom-Vettori].pdb
+F:\2019-2020\TecnologiaProgettazione\025_Esercizio1[Classroom-Vettori]\Esercizio1[Classroom-Vettori]\bin\Debug\Esercizio1[Classroom-Vettori].exe.config
+F:\2019-2020\TecnologiaProgettazione\025_Esercizio1[Classroom-Vettori]\Esercizio1[Classroom-Vettori]\bin\Debug\Esercizio1[Classroom-Vettori].exe
+F:\2019-2020\TecnologiaProgettazione\025_Esercizio1[Classroom-Vettori]\Esercizio1[Classroom-Vettori]\bin\Debug\Esercizio1[Classroom-Vettori].pdb
+F:\2019-2020\TecnologiaProgettazione\025_Esercizio1[Classroom-Vettori]\Esercizio1[Classroom-Vettori]\obj\Debug\Esercizio1[Classroom-Vettori].csprojAssemblyReference.cache
+F:\2019-2020\TecnologiaProgettazione\025_Esercizio1[Classroom-Vettori]\Esercizio1[Classroom-Vettori]\obj\Debug\Esercizio1[Classroom-Vettori].csproj.CoreCompileInputs.cache
+F:\2019-2020\TecnologiaProgettazione\025_Esercizio1[Classroom-Vettori]\Esercizio1[Classroom-Vettori]\obj\Debug\Esercizio1[Classroom-Vettori].exe
+F:\2019-2020\TecnologiaProgettazione\025_Esercizio1[Classroom-Vettori]\Esercizio1[Classroom-Vettori]\obj\Debug\Esercizio1[Classroom-Vettori].pdb

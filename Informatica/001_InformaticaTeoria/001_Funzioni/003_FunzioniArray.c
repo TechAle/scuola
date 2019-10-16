@@ -6,8 +6,6 @@
 */
 #include <stdio.h>
 #define N 5
-void rich(int vet[], int len_);
-void stampa(int vet[], int len);
 
 void rich(int vet[], int len)
 {

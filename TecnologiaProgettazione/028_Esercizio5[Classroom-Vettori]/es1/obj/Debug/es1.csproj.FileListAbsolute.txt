@@ -1,0 +1,6 @@
+/Users/alessandro/Projects/es1/es1/bin/Debug/es1.exe
+/Users/alessandro/Projects/es1/es1/bin/Debug/es1.pdb
+/Users/alessandro/Projects/es1/es1/obj/Debug/es1.csprojAssemblyReference.cache
+/Users/alessandro/Projects/es1/es1/obj/Debug/es1.csproj.CoreCompileInputs.cache
+/Users/alessandro/Projects/es1/es1/obj/Debug/es1.exe
+/Users/alessandro/Projects/es1/es1/obj/Debug/es1.pdb
