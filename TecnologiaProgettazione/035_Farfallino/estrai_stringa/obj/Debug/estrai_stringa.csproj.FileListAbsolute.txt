@@ -1,0 +1,12 @@
+/Users/alessandro/Projects/estrai_stringa/estrai_stringa/bin/Debug/estrai_stringa.exe
+/Users/alessandro/Projects/estrai_stringa/estrai_stringa/bin/Debug/estrai_stringa.pdb
+/Users/alessandro/Projects/estrai_stringa/estrai_stringa/obj/Debug/estrai_stringa.csprojAssemblyReference.cache
+/Users/alessandro/Projects/estrai_stringa/estrai_stringa/obj/Debug/estrai_stringa.exe
+/Users/alessandro/Projects/estrai_stringa/estrai_stringa/obj/Debug/estrai_stringa.pdb
+E:\2019-2020\TecnologiaProgettazione\035_Farfallino\estrai_stringa\bin\Debug\estrai_stringa.exe.config
+E:\2019-2020\TecnologiaProgettazione\035_Farfallino\estrai_stringa\bin\Debug\estrai_stringa.exe
+E:\2019-2020\TecnologiaProgettazione\035_Farfallino\estrai_stringa\bin\Debug\estrai_stringa.pdb
+E:\2019-2020\TecnologiaProgettazione\035_Farfallino\estrai_stringa\obj\Debug\estrai_stringa.csprojAssemblyReference.cache
+E:\2019-2020\TecnologiaProgettazione\035_Farfallino\estrai_stringa\obj\Debug\estrai_stringa.csproj.CoreCompileInputs.cache
+E:\2019-2020\TecnologiaProgettazione\035_Farfallino\estrai_stringa\obj\Debug\estrai_stringa.exe
+E:\2019-2020\TecnologiaProgettazione\035_Farfallino\estrai_stringa\obj\Debug\estrai_stringa.pdb

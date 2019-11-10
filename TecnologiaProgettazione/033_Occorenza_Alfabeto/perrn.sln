@@ -1,0 +1,24 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.705
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "perrn", "perrn\perrn.csproj", "{0C597BED-B86A-43DA-ACF4-58021B18F274}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|anycpu = Debug|anycpu
+		Release|anycpu = Release|anycpu
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0C597BED-B86A-43DA-ACF4-58021B18F274}.Debug|anycpu.ActiveCfg = Debug|Any CPU
+		{0C597BED-B86A-43DA-ACF4-58021B18F274}.Debug|anycpu.Build.0 = Debug|Any CPU
+		{0C597BED-B86A-43DA-ACF4-58021B18F274}.Release|anycpu.ActiveCfg = Release|Any CPU
+		{0C597BED-B86A-43DA-ACF4-58021B18F274}.Release|anycpu.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4454384D-7197-4834-B471-8CB58ABCA2BE}
+	EndGlobalSection
+EndGlobal

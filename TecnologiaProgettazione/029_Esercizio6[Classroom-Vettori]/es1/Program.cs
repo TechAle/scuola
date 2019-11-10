@@ -3,7 +3,7 @@
        Autore: Condello Alessandro
        Matricola: 11465
        A.S. 2019-2020
-       Ultima modifica: 16/10/2019
+       Ultima modifica: 18/10/2019
        Descrizione -	Dati due vettori, creare un vettore che contenga solo i numeri pari e un vettore che
                         contenga solo i numeri dispari.
 */
@@ -33,18 +33,15 @@ namespace Esercizio1_Classroom_Vettori_
 					val = vet2[i - vet1.Length];
 				// Analisi del valore
 				if ( val % 2 == 0)
-				{
-					vetPari[iPari] = val;
-					iPari += 1;
-				}else
-				{
-					vetDispari[iDispari] = val;
-					iDispari += 1;
-				}
+					vetPari[iPari++] = val;
+				else
+					vetDispari[iDispari++] = val;
+					
 			}
 
+            // Stampe
 			
-			Console.Write("vetDispari = [");
+			Console.Write("VetDispari = [");
 			for (int i = 0; i < iDispari; i++)
 			{
 				if (i > 0)
@@ -53,7 +50,7 @@ namespace Esercizio1_Classroom_Vettori_
 			}
 			Console.Write("]");
 
-			Console.Write("vetPari = [");
+			Console.Write("VetPari = [");
 			for (int i = 0; i < iPari; i++)
 			{
 				if (i > 0)

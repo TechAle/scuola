@@ -1,0 +1,24 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.705
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "estrai_stringa", "estrai_stringa\estrai_stringa.csproj", "{332FF3BA-EF88-41DA-A68C-3AD5EA515D34}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|anycpu = Debug|anycpu
+		Release|anycpu = Release|anycpu
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{332FF3BA-EF88-41DA-A68C-3AD5EA515D34}.Debug|anycpu.ActiveCfg = Debug|Any CPU
+		{332FF3BA-EF88-41DA-A68C-3AD5EA515D34}.Debug|anycpu.Build.0 = Debug|Any CPU
+		{332FF3BA-EF88-41DA-A68C-3AD5EA515D34}.Release|anycpu.ActiveCfg = Release|Any CPU
+		{332FF3BA-EF88-41DA-A68C-3AD5EA515D34}.Release|anycpu.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {722F6C34-202C-4D80-95F9-35043FF3503E}
+	EndGlobalSection
+EndGlobal

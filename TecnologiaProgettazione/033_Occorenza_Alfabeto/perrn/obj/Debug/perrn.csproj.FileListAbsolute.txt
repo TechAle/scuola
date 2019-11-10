@@ -1,0 +1,12 @@
+/Users/alessandro/Projects/perrn/perrn/bin/Debug/perrn.exe
+/Users/alessandro/Projects/perrn/perrn/bin/Debug/perrn.pdb
+/Users/alessandro/Projects/perrn/perrn/obj/Debug/perrn.csprojAssemblyReference.cache
+/Users/alessandro/Projects/perrn/perrn/obj/Debug/perrn.exe
+/Users/alessandro/Projects/perrn/perrn/obj/Debug/perrn.pdb
+F:\2019-2020\TecnologiaProgettazione\033_Occorenza_Alfabeto\perrn\bin\Debug\perrn.exe.config
+F:\2019-2020\TecnologiaProgettazione\033_Occorenza_Alfabeto\perrn\bin\Debug\perrn.exe
+F:\2019-2020\TecnologiaProgettazione\033_Occorenza_Alfabeto\perrn\bin\Debug\perrn.pdb
+F:\2019-2020\TecnologiaProgettazione\033_Occorenza_Alfabeto\perrn\obj\Debug\perrn.csprojAssemblyReference.cache
+F:\2019-2020\TecnologiaProgettazione\033_Occorenza_Alfabeto\perrn\obj\Debug\perrn.csproj.CoreCompileInputs.cache
+F:\2019-2020\TecnologiaProgettazione\033_Occorenza_Alfabeto\perrn\obj\Debug\perrn.exe
+F:\2019-2020\TecnologiaProgettazione\033_Occorenza_Alfabeto\perrn\obj\Debug\perrn.pdb

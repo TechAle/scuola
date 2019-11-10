@@ -1,0 +1,5 @@
+/Users/alessandro/Projects/perrn/perrn/bin/Debug/perrn.exe
+/Users/alessandro/Projects/perrn/perrn/bin/Debug/perrn.pdb
+/Users/alessandro/Projects/perrn/perrn/obj/Debug/perrn.csprojAssemblyReference.cache
+/Users/alessandro/Projects/perrn/perrn/obj/Debug/perrn.exe
+/Users/alessandro/Projects/perrn/perrn/obj/Debug/perrn.pdb

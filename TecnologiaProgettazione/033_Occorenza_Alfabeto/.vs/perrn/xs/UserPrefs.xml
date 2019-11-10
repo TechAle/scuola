@@ -1,0 +1,23 @@
+﻿<Properties StartupConfiguration="{0C597BED-B86A-43DA-ACF4-58021B18F274}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="perrn/Program.cs">
+    <Files>
+      <File FileName="perrn/Program.cs" Line="10" Column="14" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="perrn" expanded="True" selected="True">
+            <Node name="perrn" expanded="True" />
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.perrn PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|anycpu" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

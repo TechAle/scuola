@@ -1,0 +1,7 @@
+C:\Users\11465\source\repos\stringhe\stringhe\bin\Debug\stringhe.exe.config
+C:\Users\11465\source\repos\stringhe\stringhe\bin\Debug\stringhe.exe
+C:\Users\11465\source\repos\stringhe\stringhe\bin\Debug\stringhe.pdb
+C:\Users\11465\source\repos\stringhe\stringhe\obj\Debug\stringhe.csprojAssemblyReference.cache
+C:\Users\11465\source\repos\stringhe\stringhe\obj\Debug\stringhe.csproj.CoreCompileInputs.cache
+C:\Users\11465\source\repos\stringhe\stringhe\obj\Debug\stringhe.exe
+C:\Users\11465\source\repos\stringhe\stringhe\obj\Debug\stringhe.pdb

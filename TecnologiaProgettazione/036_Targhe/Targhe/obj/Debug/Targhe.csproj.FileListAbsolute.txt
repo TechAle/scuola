@@ -1,0 +1,7 @@
+C:\Users\11465\source\repos\Targhe\Targhe\bin\Debug\Targhe.exe.config
+C:\Users\11465\source\repos\Targhe\Targhe\bin\Debug\Targhe.exe
+C:\Users\11465\source\repos\Targhe\Targhe\bin\Debug\Targhe.pdb
+C:\Users\11465\source\repos\Targhe\Targhe\obj\Debug\Targhe.csprojAssemblyReference.cache
+C:\Users\11465\source\repos\Targhe\Targhe\obj\Debug\Targhe.csproj.CoreCompileInputs.cache
+C:\Users\11465\source\repos\Targhe\Targhe\obj\Debug\Targhe.exe
+C:\Users\11465\source\repos\Targhe\Targhe\obj\Debug\Targhe.pdb
