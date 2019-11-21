@@ -1,14 +1,16 @@
 ﻿<Properties StartupConfiguration="{E986CD03-D983-48BF-871C-F947D5987323}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Prog2/Program.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Prog3/Program.cs">
     <Files>
-      <File FileName="Prog2/Program.cs" Line="127" Column="8" />
+      <File FileName="Prog2/Program.cs" Line="94" Column="18" />
+      <File FileName="Prog3/Program.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="Casuale" expanded="True">
             <Node name="Prog1" expanded="True" />
-            <Node name="Prog2" expanded="True">
+            <Node name="Prog2" expanded="True" />
+            <Node name="Prog3" expanded="True">
               <Node name="Program.cs" selected="True" />
             </Node>
           </Node>
@@ -17,6 +19,7 @@
     </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.ItemProperties.Prog1 PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.ItemProperties.Prog3 FirstBuild="True" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.ItemProperties.Prog2 PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|anycpu" />
