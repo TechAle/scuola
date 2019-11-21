@@ -1,0 +1,4 @@
+/Users/alessandro/Projects/Casuale/Prog2/bin/Debug/Prog2.exe
+/Users/alessandro/Projects/Casuale/Prog2/bin/Debug/Prog2.pdb
+/Users/alessandro/Projects/Casuale/Prog2/obj/anycpu/Debug/Prog2.exe
+/Users/alessandro/Projects/Casuale/Prog2/obj/anycpu/Debug/Prog2.pdb
