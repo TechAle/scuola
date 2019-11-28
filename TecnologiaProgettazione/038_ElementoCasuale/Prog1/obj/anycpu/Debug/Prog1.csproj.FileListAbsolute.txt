@@ -2,3 +2,10 @@
 /Users/alessandro/Projects/Casuale/Prog1/bin/Debug/Prog1.pdb
 /Users/alessandro/Projects/Casuale/Prog1/obj/anycpu/Debug/Prog1.exe
 /Users/alessandro/Projects/Casuale/Prog1/obj/anycpu/Debug/Prog1.pdb
+C:\Users\11465\Desktop\038_ElementoCasuale\Prog1\bin\Debug\Prog1.exe.config
+C:\Users\11465\Desktop\038_ElementoCasuale\Prog1\bin\Debug\Prog1.exe
+C:\Users\11465\Desktop\038_ElementoCasuale\Prog1\bin\Debug\Prog1.pdb
+C:\Users\11465\Desktop\038_ElementoCasuale\Prog1\obj\anycpu\Debug\Prog1.csprojAssemblyReference.cache
+C:\Users\11465\Desktop\038_ElementoCasuale\Prog1\obj\anycpu\Debug\Prog1.csproj.CoreCompileInputs.cache
+C:\Users\11465\Desktop\038_ElementoCasuale\Prog1\obj\anycpu\Debug\Prog1.exe
+C:\Users\11465\Desktop\038_ElementoCasuale\Prog1\obj\anycpu\Debug\Prog1.pdb

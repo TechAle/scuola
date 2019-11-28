@@ -1,0 +1,5 @@
+/Users/alessandro/Projects/RadiciQuadrate/RadiciQuadrate/bin/Debug/RadiciQuadrate.exe
+/Users/alessandro/Projects/RadiciQuadrate/RadiciQuadrate/bin/Debug/RadiciQuadrate.pdb
+/Users/alessandro/Projects/RadiciQuadrate/RadiciQuadrate/obj/Debug/RadiciQuadrate.csprojAssemblyReference.cache
+/Users/alessandro/Projects/RadiciQuadrate/RadiciQuadrate/obj/Debug/RadiciQuadrate.exe
+/Users/alessandro/Projects/RadiciQuadrate/RadiciQuadrate/obj/Debug/RadiciQuadrate.pdb

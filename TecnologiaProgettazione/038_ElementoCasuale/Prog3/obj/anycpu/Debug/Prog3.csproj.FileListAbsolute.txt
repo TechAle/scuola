@@ -2,3 +2,9 @@
 /Users/alessandro/Projects/Casuale/Prog3/bin/Debug/Prog3.pdb
 /Users/alessandro/Projects/Casuale/Prog3/obj/anycpu/Debug/Prog3.exe
 /Users/alessandro/Projects/Casuale/Prog3/obj/anycpu/Debug/Prog3.pdb
+C:\Users\11465\Desktop\038_ElementoCasuale\Prog3\bin\Debug\Prog3.exe.config
+C:\Users\11465\Desktop\038_ElementoCasuale\Prog3\bin\Debug\Prog3.exe
+C:\Users\11465\Desktop\038_ElementoCasuale\Prog3\bin\Debug\Prog3.pdb
+C:\Users\11465\Desktop\038_ElementoCasuale\Prog3\obj\anycpu\Debug\Prog3.csproj.CoreCompileInputs.cache
+C:\Users\11465\Desktop\038_ElementoCasuale\Prog3\obj\anycpu\Debug\Prog3.exe
+C:\Users\11465\Desktop\038_ElementoCasuale\Prog3\obj\anycpu\Debug\Prog3.pdb

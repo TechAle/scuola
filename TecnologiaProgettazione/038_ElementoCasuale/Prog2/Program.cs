@@ -36,9 +36,8 @@ namespace Prog1
             Random rndA = new Random(2018);
             // Creazione array con dimensione decisa dallo sviluppatore
             int[] A = new int[LUNGHEZZA_A];
-            // Creazione di due valori interi per tenere in memoria:
+            // Creazione di un valore intero per tenere in memoria:
             // In uno la media della metà dei valore totali del primo vettore,
-            // Nell'altro i valori dispari della metà dei valore totali del secondo vettore
             float mediaA;
             // Creazione di un cronometro
             Stopwatch cronometro = new Stopwatch();
@@ -62,14 +61,19 @@ namespace Prog1
             t.Join();
             //// Stampa finale di tutte le due media
             cronometro.Stop();
-            Console.Write("Media degli elementi estratti da A: {0}\nTempo impiegato: {1} milli secondi", mediaA, cronometro.ElapsedMilliseconds);
+            Console.Write("Media degli elementi estratti da A ( primi {2} ordinati ): {0}\nTempo impiegato: {1} milli secondi", mediaA, cronometro.ElapsedMilliseconds,LUNGHEZZA_A/2);
         }
 
-        public static void threadB()
+        private static void threadB()
         {
+            //// Variabili ////
+            // Costante
             const int LUNGHEZZA_B = 3000000;
+            // Creazione di un vettore con  lunghezza costante
             int[] B = new int[LUNGHEZZA_B];
+            // Contatore
             int nDispari;
+            // Creazione seed
             Random rndB = new Random(2019);
 
             ////// Vettore B //////
@@ -83,7 +87,7 @@ namespace Prog1
             // Reperimento del numero degli elementi dispari mediante una funzione
             nDispari = Dispari(B, LUNGHEZZA_B);
             // Stampa
-            Console.WriteLine("Elementi dispari estratti da B: {0}", nDispari);
+            Console.WriteLine("Elementi dispari estratti da B ( primi {1} ordinati ): {0}", nDispari, LUNGHEZZA_B/2);
         }
 
         /*
@@ -116,7 +120,7 @@ namespace Prog1
                 // Somma effettiva
                 val += vet[i];
             // Ritorno il valore
-            return val / (lung / 2);
+            return val / (float) (lung / 2);
         }
 
         /*
@@ -130,7 +134,7 @@ namespace Prog1
             // Ciclo per metà lunghezza del vettore
             for (int i = 0; i < lung / 2; i++)
                 // Controllo se è dispari
-                if (vet[i] % 2 == 0)
+                if (vet[i] % 2 != 0)
                     val += 1;
             // Ritorno il valore
             return val;

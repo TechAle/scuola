@@ -30,8 +30,8 @@ namespace Prog1
         {
             //// Variabili ////
             // Costanti
-            const int LUNGHEZZA_A = 5000000,
-                      LUNGHEZZA_B = 3000000;
+            const int LUNGHEZZA_A = 8000000,
+                      LUNGHEZZA_B = 5000000;
             // Creazione di un seed
             Random rndA = new Random(2018),
                    rndB = new Random(2019);
@@ -71,7 +71,7 @@ namespace Prog1
 
             //// Stampa finale di tutte le due media
             cronometro.Stop();
-            Console.Write("Media degli elementi estratti da A: {0}\nElementi dispari estratti da B: {1}\nTempo impiegato: {2} milli secondi", mediaA, nDispari, cronometro.ElapsedMilliseconds);
+            Console.Write("Media degli elementi estratti da A ( primi {3} ordinati ): {0}\nElementi dispari estratti da B ( primi {4} ordinati ): {1}\nTempo impiegato: {2} milli secondi", mediaA, nDispari, cronometro.ElapsedMilliseconds,LUNGHEZZA_A/2,LUNGHEZZA_B/2);
         }
 
         /*
@@ -104,7 +104,7 @@ namespace Prog1
                 // Somma effettiva
                 val += vet[i];
             // Ritorno il valore
-            return val/(lung/2);
+            return val/(float)(lung/2);
         }
 
         /*
@@ -118,7 +118,7 @@ namespace Prog1
             // Ciclo per metà lunghezza del vettore
             for (int i = 0; i < lung / 2; i++)
                 // Controllo se è dispari
-                if (vet[i] % 2 == 0)
+                if (vet[i] % 2 != 0)
                     val += 1;
             // Ritorno il valore
             return val;

@@ -1,4 +1,4 @@
-﻿/*
+/*
        File: ElementiCasuali.cs
        Autore: Condello Alessandro
        Matricola: 11465
@@ -20,9 +20,7 @@
                         algoritmi paralleli.
 */
 using System;
-using System.Diagnostics;
-using System.Threading;
-using System.Threading.Tasks;
+>
 
 namespace Prog3
 {
@@ -44,21 +42,21 @@ namespace Prog3
             // Creazione di un cronometro
             Stopwatch cronometro = new Stopwatch();
             // Creazione thread ed avviamento
-            Task.Factory.StartNew(threadB);
+            Task t = Task.Factory.StartNew(threadB);
             // Attivazione cronometro
             cronometro.Start();
             ////// Vettore A //////
             //// Reperimento dati al vettore ////
             // Rimpe il vettore di numeri casuali
             Input_(A, LUNGHEZZA_A, rndA, -10, 20);
-
+            // Attesa della fine del task
+            t.Wait();
             //// Elaborazione dei dati ////
             // Utilizzo della funzione sort per ordinare automaticamente l'array di interi.
             Array.Sort(A);
             // Reperimento della media mediante l'utilizzo di una funzione
             mediaA = Media(A, LUNGHEZZA_A);
 
-            // In attesa che l'altro thread finisca
 
             //// Stampa finale di tutte le due media
             cronometro.Stop();
@@ -116,7 +114,7 @@ namespace Prog3
                 // Somma effettiva
                 val += vet[i];
             // Ritorno il valore
-            return val / (lung / 2);
+            return val / (float) (lung / 2);
         }
 
         /*
@@ -130,7 +128,7 @@ namespace Prog3
             // Ciclo per metà lunghezza del vettore
             for (int i = 0; i < lung / 2; i++)
                 // Controllo se è dispari
-                if (vet[i] % 2 == 0)
+                if (vet[i] % 2 != 0)
                     val += 1;
             // Ritorno il valore
             return val;
