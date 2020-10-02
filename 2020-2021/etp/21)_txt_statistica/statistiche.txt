@@ -1,0 +1,3 @@
+Riga 1 : Somma 8 Media 4,00
+Riga 2 : Somma 10 Media 5,00
+Riga 3 : Somma 9 Media 4,50

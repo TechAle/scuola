@@ -1,0 +1,4 @@
+Cognome Nome Altezza Peso
+Bianchi Paolo 1.75 76
+Rossi Maria 1.84 82
+Verdi Carlo 1.65 58
