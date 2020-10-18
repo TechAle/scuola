@@ -1,0 +1,3 @@
+fiat;10
+panda;50
+ferrari;100

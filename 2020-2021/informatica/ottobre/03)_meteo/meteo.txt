@@ -1,0 +1,2 @@
+novara;neve;-2;pioggia;40;sole;20
+milano;sole;20;neve;-2;pioggia;0
