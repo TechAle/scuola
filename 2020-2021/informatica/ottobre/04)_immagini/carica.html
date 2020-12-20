@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Carica</title>
+    <style>
+        label {
+            display: block;
+            margin: 5px 5px 5px 5px;
+        }
+        fieldset {
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+    <center>
+    <fieldset>
+        <form method="post" action="carica.php" enctype="multipart/form-data">
+            <label>
+                Nome : <input type="text" name="nome">
+            </label>
+            <label>
+                Titolo : <input type="text" name="titolo">
+            </label>
+            <label>
+                Immagine : <input type="file" name="immagine">
+            </label>
+            <input style="align-content: center" type="submit" name="avvia">
+        </form>
+    </fieldset>
+    </center>
+
+</body>
+</html>
