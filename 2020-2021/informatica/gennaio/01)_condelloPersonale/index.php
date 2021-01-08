@@ -1,0 +1,9 @@
+<a href="creaDatabase.php">crea database</a><br>
+<a href="eliminaDatabase.php">elimina database</a><br>
+<a href="creaTabella.php">crea tabella</a><br>
+<a href="eliminaTabella.php">elimina tabella</a><br>
+<a href="form.php">form</a><br>
+<a href="elimina.php">elimina</a><br>
+<a href="csvLocale.php">csvLocale</a><br>
+<a href="csvUpload.php">csvUpload</a><br>
+<a href="visualizza.php">visualizza</a><br>

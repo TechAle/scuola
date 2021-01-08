@@ -1,0 +1,40 @@
+Rossi;Mario;RSSMRA80S01F205I;01-01-2015;1;Impiegato;1;25000.8;20139;via Roma, 15;Milano;MI
+Ferrari;Marco;FRRMRC81A01F952N;15-10-2009;2;Dirigente;2;45000.5;28100;via Ricci, 14;Novara;NO
+FERRO;Mario;FRRMRA80S11F205I;11-01-2015;1;Marketing;0;1;28062;via Italia 1;Cameri;NO
+FEZZO;Lario;FZZLRA90S11F215I;11-01-2015;4;Occupato;0;90000.9;28062;via Italia 5;Cameri;NO
+FELLO;Lario;FLLLRA90S11L217I;11-01-2017;5;Developer;0;90000.9;28062;via po 5;Cameri;NO
+FELLO;Cario;FLLCRA90S51L217I;11-01-2020;2;Magazziniere;0;5555.9;28062;via mazzucchielli carlo 61A;Cameri;NO
+FELLO;Cagio;FLLCGA90T51L497I;11-01-2020;1;Occupato;0;15000.5;28062;via mazzucchielli carlo 61A;Cameri;NO
+Leila;Giusti;GSTLLE08E44D612R;04-05-2008;1;Impiegato;1;25000.8;50129;via Filippo Strozzi, 15;Firenze;FI
+Egisto;Cecchini;CCCGST02B20G273C;15-10-2009;2;Dirigente;2;45000.5;90134;Via Danisinni, 14;Palermo;PA
+Goffredo Tommasi;Giusti;TMMGFR03P16H501T;02-06-2012;1;Impiegato;1;25000.8;00185;Via Varese, 16;Roma;RM
+Rudolf;Mazza;MZZRLF04E15A662Q;16-12-2013;2;Dirigente;2;45000.5;70124;Via Mariano Santo, 17;Bari;BA
+Michela;Carminati;CRMMHL08P41L219E;21-09-2014;1;Impiegato;1;25000.8;10122;Via Perrone, 16;Torino;TO
+Bianchi;Maria;BNCMRA80A01F952Q;04-05-2008;1;Office manager;7;20000.0;28100; via Gatti, 15;Novara;NO
+Cristina;Lorefice;CRSLFC62A01F205X;04-05-2008;3;Dottoressa;8;10040.0;28546;via Numeri, 10;Milano;MI
+Micheal;Polimo;MCHPLM80C01D612M;15-10-2009;5;Dottore;1;60102.1;50124;via Cani, 9;Firenze;FI
+Datini;Enrico;DTNNRC80A03F952C;11-01-2015;4;Impiegato;2;2;28100;via Conigli, 10;Novara;NO
+Valenti;Valerio;VLNVLR80A01F952J;11-01-2017;3;Impiegato;3;2;28100;via GattiECani, 54;Novara;NO
+Santangelo;Adela;SNTDLA03H60A662W;04-05-2008;3;Magazziniere;3;30000;80142;Corso Umberto I, 373-391;Napoli;NA
+Tortora;Arcibaldo;TRTRBL02S27A662D;15-10-2009;4;Bidello;1;45000;80139;Via Benedetto Cairoli, 94;Napoli;NA 
+Frau;Lilia;FRALLI02M47F839O;02-06-2012;2;Tecnico;1;69000;80131;Via Miano, 15;Napoli;NA 
+Macri;Efrem;MCRFRM10P44D612P;30-01-2019;1;Sistemista;1;33333;81030;Via Giosuè Carducci, 25;Castel Volturno;CE 
+Boni;Marianna;BNOMNN05P63A944V;22-03-2000;1;Architetto;1;2;04021;Via Annunziata, 33-21;Castelforte;LT
+Pieri;Franco;PRILCU95C05F952Z;13-04-2012;2;Lavavetri;4;85000;28047;Via Sempione 40;Oleggio;NO
+Carrè;Lucio;CRRLCU13H04E897O;25-07-2011;1;Magazziniere;6;65000;80147;Via Vicinale Galeoncello 3;Napoli;NA
+Leonardi;Camillo;LNRCLL58H13F839G;11-11-2008;2;Barista;3;25000.8;15121;Via Legnano 27;Alessandria;AL
+Smusi;Pietri;SMSPTR62D06A182E;28-07-2016;5;Ingegniere;7;45000.5;10134;Via Vittorio Emanuele 14;Torino;TO
+Marmi;Curina;MRMCRN97M52A479N;18-12-2020;4;Segretaria;10;25000.8;14100;Via Alessandro Artom 39;Asti;AT
+Pinco;Pallino;GHDGLGFH7FTG274H;16-12-2010;1;Impiegato;6;43775.5;28047;via gesù13;Roma;RM
+Pinco;Pallo;GHjv34FH7FTG274H;22-03-2000;3;Impiegato;3;43775.5;28047;via dei dannati15;Roma;RM
+Ferro;Tiziano;HT45DF8HB23VGH4H;13-04-2012;3;Impiegato;5;43775.5;28047;via Roma13;Roma;RM
+Rossi;Mario;RSSMRA72M06H501A;25-07-2011;2;impiegato;5;65000;25000;Via Condotti 4;Roma;RM
+Verdi;Marta;VRDMRT80C49F205P;13-01-2019;1;impiegato;8;65000;28000;Via Larga 12;Milano;MI
+Bianco;Giovanni;BNCGVN81A01F952N;10-08-2005;2;Impiegato;3;43775.5;28066;via G.Cesare,13;Galliate;NO
+Begnardi;Gabryel;GBRBGN69A01F952N;07-06-2003;1;Magazziniere;4;43775.5;28068;via S.Ambrogio,12;Romentino;NO
+Fere;Andrea;FRENDR48A05F952P;04-05-2007;2;Operaio;4;45000.5;37100;via Dante,11;Verona;VR
+Malatacca;Giulio;MLTGLO23B08T452C;25-09-1999;5;Magazziniere;4;45000.5;20016;via M.Napoleone,10;Pero;MI
+Panichi;Sarah;PNCSRH99P01C922L;02-10-2002;3;ViceDirigente;4;45000.5;27029;via F.Petrarca,9;Vigevano;PV
+Bianchi;Marco;BNCMRC62L09F205B;29-07-2010;3;Impiegato;3;30000.6;20019;via Roma, 28;Milano;MI
+Polaretti;Giulia;PLRGLI01R04D969G;13-04-2019;4;Assistente;4;69000;16121;via Settembre, 2;Genova;GE
+Rosa;Emanuele;RSOMNL67H15L219P;02-12-2006;5;Insegnante;5;33333;10121;via Dio, 20;Torino;TO

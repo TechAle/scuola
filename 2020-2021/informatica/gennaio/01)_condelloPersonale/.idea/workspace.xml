@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="aa10f36f-db3d-4fe6-9ce4-681b6c76fe50" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP" />
+  <component name="ProjectId" id="1mhevj3Ib0kohyJin8ZxZ9flLG3" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="aa10f36f-db3d-4fe6-9ce4-681b6c76fe50" name="Default Changelist" comment="" />
+      <created>1609950505427</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1609950505427</updated>
+      <workItem from="1609950515649" duration="406000" />
+      <workItem from="1609966754949" duration="1220000" />
+      <workItem from="1609968799087" duration="5586000" />
+      <workItem from="1610036612698" duration="6386000" />
+      <workItem from="1610050931513" duration="5043000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="652" y="139" key="#PHP" timestamp="1609967397065">
+      <screen x="0" y="23" width="1920" height="972" />
+    </state>
+    <state x="652" y="139" key="#PHP/0.23.1920.972@0.23.1920.972" timestamp="1609967397065" />
+    <state x="366" y="326" key="#SQL_Dialects" timestamp="1609971894327">
+      <screen x="0" y="23" width="1920" height="972" />
+    </state>
+    <state x="366" y="326" key="#SQL_Dialects/0.23.1920.972@0.23.1920.972" timestamp="1609971894327" />
+    <state x="560" y="155" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1609969389348">
+      <screen x="0" y="23" width="1920" height="972" />
+    </state>
+    <state x="560" y="155" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1920.972@0.23.1920.972" timestamp="1609969389348" />
+    <state width="1294" height="249" key="GridCell.Tab.0.bottom" timestamp="1610042456485">
+      <screen x="0" y="23" width="1920" height="972" />
+    </state>
+    <state width="1294" height="249" key="GridCell.Tab.0.bottom/0.23.1920.972@0.23.1920.972" timestamp="1610042456485" />
+    <state width="1294" height="249" key="GridCell.Tab.0.center" timestamp="1610042456484">
+      <screen x="0" y="23" width="1920" height="972" />
+    </state>
+    <state width="1294" height="249" key="GridCell.Tab.0.center/0.23.1920.972@0.23.1920.972" timestamp="1610042456484" />
+    <state width="1294" height="249" key="GridCell.Tab.0.left" timestamp="1610042456483">
+      <screen x="0" y="23" width="1920" height="972" />
+    </state>
+    <state width="1294" height="249" key="GridCell.Tab.0.left/0.23.1920.972@0.23.1920.972" timestamp="1610042456483" />
+    <state width="1294" height="249" key="GridCell.Tab.0.right" timestamp="1610042456485">
+      <screen x="0" y="23" width="1920" height="972" />
+    </state>
+    <state width="1294" height="249" key="GridCell.Tab.0.right/0.23.1920.972@0.23.1920.972" timestamp="1610042456485" />
+    <state width="221" height="457" key="HiddenNamespacesPopup" timestamp="1609969502091">
+      <screen x="0" y="23" width="1920" height="972" />
+    </state>
+    <state width="221" height="457" key="HiddenNamespacesPopup/0.23.1920.972@0.23.1920.972" timestamp="1609969502091" />
+    <state x="783" y="420" key="NewPhpFileDialog" timestamp="1610051652658">
+      <screen x="0" y="23" width="1920" height="972" />
+    </state>
+    <state x="783" y="420" key="NewPhpFileDialog/0.23.1920.972@0.23.1920.972" timestamp="1610051652658" />
+    <state x="469" y="128" key="SettingsEditor" timestamp="1609968668347">
+      <screen x="0" y="23" width="1920" height="972" />
+    </state>
+    <state x="469" y="128" key="SettingsEditor/0.23.1920.972@0.23.1920.972" timestamp="1609968668347" />
+    <state x="545" y="301" key="com.intellij.database.dbimport.ImportUtil.ChooseTargetDialog" timestamp="1609975828488">
+      <screen x="0" y="23" width="1920" height="972" />
+    </state>
+    <state x="545" y="301" key="com.intellij.database.dbimport.ImportUtil.ChooseTargetDialog/0.23.1920.972@0.23.1920.972" timestamp="1609975828488" />
+    <state x="609" y="93" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1610036964421">
+      <screen x="0" y="23" width="1920" height="972" />
+    </state>
+    <state x="609" y="93" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/0.23.1920.972@0.23.1920.972" timestamp="1610036964421" />
+    <state x="625" y="237" width="670" height="676" key="search.everywhere.popup" timestamp="1610057634525">
+      <screen x="0" y="23" width="1920" height="972" />
+    </state>
+    <state x="625" y="237" width="670" height="676" key="search.everywhere.popup/0.23.1920.972@0.23.1920.972" timestamp="1610057634525" />
+  </component>
+</project>
