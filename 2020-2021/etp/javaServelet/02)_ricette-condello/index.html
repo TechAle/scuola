@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ricettario</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+
+<nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-primary">
+    <a class="navbar-brand" href="#">Ricettario</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarText">
+        <ul class="navbar-nav mr-auto">
+            <!-- <li class="nav-item active"> -->
+            <li class="nav-item" id="primi">
+                <a class="nav-link piattoDec">Primi</a>
+            </li>
+            <li class="nav-item" id="secondi">
+                <a class="nav-link piattoDec">Secondi</a>
+            </li>
+            <li class="nav-item" id="dessert">
+                <a class="nav-link piattoDec">Dessert</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<!-- Rendiamo la selezione attiva -->
+<script type="text/javascript">
+    // Le varie opzioni
+    var possibilita = ["primi", "secondi", "dessert"];
+    // Valore default
+    var defaultPoss = "primi";
+    // Prendi l'url
+    var url = new URL(window.location.href).searchParams.get("piatto").toLowerCase();
+    // Se nell'url abbiamo abboamo una delle possibilità, da la sua scelta, senò usa il valore di default
+    var decisione = possibilita.includes(url) ? url : defaultPoss;
+    // Rendiamolo attivo
+    document.getElementById(decisione).classList.add("active");
+</script>
+
+
+<!-- Rendirizziamo a seconda del click -->
+<script type="text/javascript">
+    var ll = "";
+    function prova() {
+        // Controlla se già contiene un valore
+        var url = window.location.href;
+        // Prendiamo ciò che il cliente ha scelto
+        var decisione = window.event.target.text.toLowerCase();
+        // Se abbiamo qualcosa
+        if (url.match("piatto=").length > 0) {
+            // Prendiamo l'inizio della sua decisione
+            var inizio = url.lastIndexOf("piatto=") + 7;
+            // Prendiamo la fine
+            var fine = (url.substring(inizio).lastIndexOf("&") === -1) ? url.length - 1 : url.substring(inizio).indexOf("&") - inizio;
+            // Sostituamo
+            url = url.replace(url.substring(inizio, fine), decisione)
+        // Senò, vuol dire che il link è vuoto, creiamo noi
+        }else url += (url.match("?") ? "" : "?") + (url.match("=") ? "&" : "") + "piatto=" + decisione.toLowerCase();
+        // Rimpiazziamo l'url
+        window.location.replace(url)
+    }
+
+    // Prendiamo tutti gli elementi con classe piattoDec per fare il listener
+    var elementi = document.getElementsByClassName("piattoDec");
+    // Aggiungiamo il listener
+    for(var i = 0; i < elementi.length; i++)
+        elementi[i].addEventListener("click", prova)
+
+</script>
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+</body>
+</html>
