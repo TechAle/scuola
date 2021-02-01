@@ -3,9 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <title>Ricettario</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/mainCss.css">
+    <style>
+        .imgDimMin {
+            min-height: 350px;
+            min-width: 350px;
+        }
+        #imgSpace {
+            margin-right: 1em;
+        }
+    </style>
 </head>
 <body>
 
@@ -18,116 +27,43 @@
 <h3 class="center" id="sotto">Scegliere quale preferisce</h3>
 
 <!-- Creiamo la grid -->
-<div class="container card">
+<div class="container">
     <div class="row">
-        <div class="col col-6 col-md-4 col-lg-3 col-xl-2 imgPt border border-dark">
-            <img src="./img/farfalle-sfiziose.jpg" class="imgStyle" style="padding-bottom: 5px" alt="imgFarfalle">
-            <span class="imgText">Farfalle Sfiziose<br></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star"></span>
-            <span class="fa fa-star"></span>
+        <div class="col col-12 col-sm-6 imgPt border border-dark imgDimMin" style="min-width: 400px; min-height: 400px">
+            <img src="./img/farfalle-sfiziose.jpg" class="imgDimMin" style="padding-bottom: 5px" alt="imgFarfalle">
         </div>
-        <div class="col col-6 col-md-4 col-lg-3 col-xl-2 imgPt border border-dark">
-            <img src="./img/maresciallo.jpg" class="imgStyle" style="padding-bottom: 5px" alt="imgFarfalle">
-            <span class="imgText">Farfalle Sfiziose<br></span>
+        <div class="col col-12 col-sm-6 imgPt border border-dark" style="width: 100%" >
+            <span class="imgText" id="imgSpace">Farfalle Sfiziose</span>
             <span class="fa fa-star checked"></span>
             <span class="fa fa-star checked"></span>
             <span class="fa fa-star checked"></span>
             <span class="fa fa-star"></span>
             <span class="fa fa-star"></span>
+            <hr>
+            <div>
+                Tempo: 60 Minuti <i class="fas fa-stopwatch"></i>
+            </div>
+            <hr>
+            <div>
+                Ingredienti:
+                <ol>
+                    <li>Pasta</li>
+                    <li>Uova</li>
+                    <li>Prosciutto</li>
+                    <li>Acqua</li>
+                    <li>Sale</li>
+                    <li>Pepe</li>
+                    <li>Burro</li>
+                    <li>Parmigiano</li>
+                </ol>
+            </div>
         </div>
-        <div class="col col-6 col-md-4 col-lg-3 col-xl-2 imgPt border border-dark">
-            <img src="./img/farfalle-sfiziose.jpg" class="imgStyle" style="padding-bottom: 5px" alt="imgFarfalle">
-            <span class="imgText">Farfalle Sfiziose<br></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star"></span>
-            <span class="fa fa-star"></span>
+        <div class="col col-12 border-left border-right border-bottom border-dark">
+            lavare e tagliare a rondelle le zucchine, in una padella versare olio cipolla e filetti di acciughe far insaporire unire le zucchine, mescolare farle cuocere per 10 minuti unire il dado sbriciolato e i pomodorini tagliati a rondelle,, proseguire ancora la cottura per 10 minuti ,lessare la pasta, condire con le verdure far saltare per 2/3 minuti spolverare con prezzemolo tritato
+            lavare e tagliare a rondelle le zucchine, in una padella versare olio cipolla e filetti di acciughe far insaporire unire le zucchine, mescolare farle cuocere per 10 minuti unire il dado sbriciolato e i pomodorini tagliati a rondelle,, proseguire ancora la cottura per 10 minuti ,lessare la pasta, condire con le verdure far saltare per 2/3 minuti spolverare con prezzemolo tritato
+            lavare e tagliare a rondelle le zucchine, in una padella versare olio cipolla e filetti di acciughe far insaporire unire le zucchine, mescolare farle cuocere per 10 minuti unire il dado sbriciolato e i pomodorini tagliati a rondelle,, proseguire ancora la cottura per 10 minuti ,lessare la pasta, condire con le verdure far saltare per 2/3 minuti spolverare con prezzemolo tritato
         </div>
-        <div class="col col-6 col-md-4 col-lg-3 col-xl-2 imgPt border border-dark">
-            <img src="./img/maresciallo.jpg" class="imgStyle" style="padding-bottom: 5px" alt="imgFarfalle">
-            <span class="imgText">Farfalle Sfiziose<br></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star"></span>
-            <span class="fa fa-star"></span>
-        </div>
-        <div class="col col-6 col-md-4 col-lg-3 col-xl-2 imgPt border border-dark">
-            <img src="./img/farfalle-sfiziose.jpg" class="imgStyle" style="padding-bottom: 5px" alt="imgFarfalle">
-            <span class="imgText">Farfalle Sfiziose<br></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star"></span>
-            <span class="fa fa-star"></span>
-        </div>
-        <div class="col col-6 col-md-4 col-lg-3 col-xl-2 imgPt border border-dark">
-            <img src="./img/maresciallo.jpg" class="imgStyle" style="padding-bottom: 5px" alt="imgFarfalle">
-            <span class="imgText">Farfalle Sfiziose<br></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star"></span>
-            <span class="fa fa-star"></span>
-        </div>
-        <div class="col col-6 col-md-4 col-lg-3 col-xl-2 imgPt border border-dark">
-            <img src="./img/farfalle-sfiziose.jpg" class="imgStyle" style="padding-bottom: 5px" alt="imgFarfalle">
-            <span class="imgText">Farfalle Sfiziose<br></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star"></span>
-            <span class="fa fa-star"></span>
-        </div>
-        <div class="col col-6 col-md-4 col-lg-3 col-xl-2 imgPt border border-dark">
-            <img src="./img/maresciallo.jpg" class="imgStyle" style="padding-bottom: 5px" alt="imgFarfalle">
-            <span class="imgText">Farfalle Sfiziose<br></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star"></span>
-            <span class="fa fa-star"></span>
-        </div>
-        <div class="col col-6 col-md-4 col-lg-3 col-xl-2 imgPt border border-dark">
-            <img src="./img/farfalle-sfiziose.jpg" class="imgStyle" style="padding-bottom: 5px" alt="imgFarfalle">
-            <span class="imgText">Farfalle Sfiziose<br></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star"></span>
-            <span class="fa fa-star"></span>
-        </div>
-        <div class="col col-6 col-md-4 col-lg-3 col-xl-2 imgPt border border-dark">
-            <img src="./img/maresciallo.jpg" class="imgStyle" style="padding-bottom: 5px" alt="imgFarfalle">
-            <span class="imgText">Farfalle Sfiziose<br></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star"></span>
-            <span class="fa fa-star"></span>
-        </div>
-        <div class="col col-6 col-md-4 col-lg-3 col-xl-2 imgPt border border-dark">
-            <img src="./img/farfalle-sfiziose.jpg" class="imgStyle" style="padding-bottom: 5px" alt="imgFarfalle">
-            <span class="imgText">Farfalle Sfiziose<br></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star"></span>
-            <span class="fa fa-star"></span>
-        </div>
-        <div class="col col-6 col-md-4 col-lg-3 col-xl-2 imgPt border border-dark">
-            <img src="./img/maresciallo.jpg" class="imgStyle" style="padding-bottom: 5px" alt="imgFarfalle">
-            <span class="imgText">Farfalle Sfiziose<br></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star"></span>
-            <span class="fa fa-star"></span>
-        </div>
+
     </div>
 </div>
 
