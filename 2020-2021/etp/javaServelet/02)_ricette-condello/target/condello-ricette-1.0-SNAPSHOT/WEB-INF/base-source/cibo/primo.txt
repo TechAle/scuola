@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ricettario</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/mainCss.css">
+    <style>
+        .imgDimMin {
+            min-height: 350px;
+            min-width: 350px;
+        }
+        #imgSpace {
+            margin-right: 1em;
+        }
+    </style>
+</head>
+<body>
+
+<nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-primary">
+    <a class="navbar-brand" href="#">Ricettario</a>
+    <button class="toRight"><a href="home">Home</a> </button>
+</nav>
+<h1 class="center" id="sopra">

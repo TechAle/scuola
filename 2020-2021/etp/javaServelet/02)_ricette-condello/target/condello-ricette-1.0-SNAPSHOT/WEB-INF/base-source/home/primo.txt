@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ricettario</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/mainCss.css">
+</head>
+<body>
+
+<nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-primary">
+    <a class="navbar-brand" href="#">Ricettario</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarText">
+        <ul class="navbar-nav mr-auto">
+            <!-- <li class="nav-item active"> -->
+            <li class="nav-item" id="primi">
+                <a class="nav-link piattoDec">Primi</a>
+            </li>
+            <li class="nav-item" id="secondi">
+                <a class="nav-link piattoDec">Secondi</a>
+            </li>
+            <li class="nav-item" id="dessert">
+                <a class="nav-link piattoDec">Dessert</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<h1 class="center" id="sopra">Ricette</h1>
+<h3 class="center" id="sotto">Scegliere la ricetta</h3>
+
+<!-- Creiamo la grid -->
+<div class="container card">
+    <div class="row">

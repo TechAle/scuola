@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ricettario</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/mainCss.css">
+    <style>
+        .imgDimMin {
+            min-height: 350px;
+            min-width: 350px;
+        }
+        #imgSpace {
+            margin-right: 1em;
+        }
+    </style>
+</head>
+<body>
+
+<nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-primary">
+    <a class="navbar-brand" href="#">Ricettario</a>
+    <button class="toRight"><a href="index.html">Home</a> </button>
+</nav>
+
+<h1 class="center" id="sopra">Fardalle Sfizziose</h1>
+<h3 class="center" id="sotto">Scegliere quale preferisce</h3>
+
+<!-- Creiamo la grid -->
+<div class="container">
+    <div class="row">
+        <div class="col col-12 col-sm-6 imgPt border border-dark imgDimMin" style="min-width: 400px; min-height: 400px">
+            <img src="./img/farfalle-sfiziose.jpg" class="imgDimMin" style="padding-bottom: 5px" alt="imgFarfalle">
+        </div>
+        <div class="col col-12 col-sm-6 imgPt border border-dark" style="width: 100%" >
+            <span class="imgText" id="imgSpace">Farfalle Sfiziose</span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star"></span>
+            <span class="fa fa-star"></span>
+            <hr>
+            <div>
+                Tempo: 60 Minuti <i class="fas fa-stopwatch"></i>
+            </div>
+            <hr>
+            <div>
+                Ingredienti:
+                <ol>
+                    <li>Pasta</li>
+                    <li>Uova</li>
+                    <li>Prosciutto</li>
+                    <li>Acqua</li>
+                    <li>Sale</li>
+                    <li>Pepe</li>
+                    <li>Burro</li>
+                    <li>Parmigiano</li>
+                </ol>
+            </div>
+        </div>
+        <div class="col col-12 border-left border-right border-bottom border-dark">
+            lavare e tagliare a rondelle le zucchine, in una padella versare olio cipolla e filetti di acciughe far insaporire unire le zucchine, mescolare farle cuocere per 10 minuti unire il dado sbriciolato e i pomodorini tagliati a rondelle,, proseguire ancora la cottura per 10 minuti ,lessare la pasta, condire con le verdure far saltare per 2/3 minuti spolverare con prezzemolo tritato
+        </div>
+
+    </div>
+</div>
+
+
+<footer class="bg-light text-center text-lg-start">
+
+    <!-- Copyright -->
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+        Creato da Condello Alessandro
+        <span class="toRight"><button><a href="crediti.html">Crediti</a></button></span>
+    </div>
+    <!-- Copyright -->
+</footer>
+<!-- Rendiamo la selezione attiva -->
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+</body>
+</html>
