@@ -19,7 +19,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../fornitori_compito" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -31,10 +31,16 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/../fornitori_compito" />
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="StructuralSearchPlugin">
+    <searchConfiguration name="Unnamed" created="1613984241142" text="group by" recursive="false" caseInsensitive="true" type="PHP" scope_type="PROJECT" scope_descriptor="" history="1">
+      <constraint name="__context__" within="" contains="" />
+    </searchConfiguration>
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="084ea1a0-c27a-46fc-a257-ca988512a742" name="Default Changelist" comment="" />
@@ -42,7 +48,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1613925666056</updated>
-      <workItem from="1613925673848" duration="6700000" />
+      <workItem from="1613925673848" duration="15857000" />
     </task>
     <servers />
   </component>
@@ -59,5 +65,14 @@
     </state>
     <state x="424" y="171" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1920.970@0.23.1920.970" timestamp="1613929320707" />
     <state x="424" y="171" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1920.973@0.23.1920.973" timestamp="1613925742102" />
+    <state x="598" y="336" width="927" height="335" key="#com.intellij.structuralsearch.plugin.ui.StructuralSearchDialog" timestamp="1613984241132">
+      <screen x="0" y="23" width="1920" height="973" />
+    </state>
+    <state x="598" y="336" width="927" height="335" key="#com.intellij.structuralsearch.plugin.ui.StructuralSearchDialog/0.23.1920.973@0.23.1920.973" timestamp="1613984241132" />
+    <state x="803" y="435" key="NewPhpFileDialog" timestamp="1613988883509">
+      <screen x="0" y="23" width="1920" height="973" />
+    </state>
+    <state x="803" y="434" key="NewPhpFileDialog/0.23.1920.970@0.23.1920.970" timestamp="1613948350973" />
+    <state x="803" y="435" key="NewPhpFileDialog/0.23.1920.973@0.23.1920.973" timestamp="1613988883509" />
   </component>
 </project>

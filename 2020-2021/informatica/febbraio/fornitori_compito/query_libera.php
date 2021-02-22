@@ -15,9 +15,13 @@
 <main role="main" class="container">
 <form  action=<?php echo $_SERVER['PHP_SELF']; ?> method='post'>
 Query da eseguire:<br />
-<textarea class="form-control" rows="3" name="query">
-SELECT * FROM personale
-</textarea>
+<textarea class="form-control" rows="3" name="query" style="height: 100px"><?php
+    if (isset($_POST['submit'])) {
+        $query=$_POST["query"];
+        $query = str_replace(array("delete","drop","update","alter"),array('','','',''),strtolower($query));
+        echo $query;
+    }else echo "SELECT * FROM personale"
+    ?></textarea>
 <br>
  <input type='submit'  name='submit' value='esegui query'></form>
 <?php 
