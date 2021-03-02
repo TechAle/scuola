@@ -123,7 +123,7 @@ public class VenditaServlet extends javax.servlet.http.HttpServlet {
         out.println("<form action='vendita' method='post'>");
         // Campo nascosto per indicare l'operazione da eseguire
         out.println("<input type='hidden' name='operazione' value='aggiungi' />");
-        out.println("<fieldset class='form-group'>");
+        out.println("<center><fieldset class='form-group'>");
         out.println("<div class='row text-left'>");
         out.println("<legend class='col-form-label col-sm-2 pt-0'>Articolo</legend>");
         out.println("<div class='col-sm-10'>");
@@ -140,7 +140,7 @@ public class VenditaServlet extends javax.servlet.http.HttpServlet {
             out.println("</div>");
         }out.println("</div>");
         out.println("</div>");
-        out.println("</fieldset>");
+        out.println("</fieldset></center>");
         out.println("<div class='form-group row'>");
         out.println("<label for='qta' class='col-3 col-form-label'>Quantit&agrave;</label>");
         out.println("<div class='col-3'>");
@@ -149,7 +149,7 @@ public class VenditaServlet extends javax.servlet.http.HttpServlet {
         out.println("<label for='size' class='col-3 col-form-label'>Dimensione</label>");
         out.println("<div class='col-3'>");
         out.println("<input type='number' class='form-control' id='size' name='size' value='35' min='35' max='47' />");
-        out.println("</div>");
+        out.println("</div><center style='width:100%'><div>");
         out.println("<label class='col-3' for=\"colori\">Colore:</label>\n" +
                 "  <select name=\"colori\" id=\"colori\">\n" +
                 "    <option value=\"blue\">blue</option>\n" +
@@ -157,9 +157,9 @@ public class VenditaServlet extends javax.servlet.http.HttpServlet {
                 "    <option value=\"verde\">verde</option>\n" +
                 "    <option value=\"nero\">nero</option>\n" +
                 "  </select>");
-        out.println("<div class='col-sm-12 text-left'>");
-        out.println("<button type='submit' class='btn btn-primary'>Acquista</button>");
-        out.println("<a class='btn btn-secondary' href='vendita?operazione=carrello' role='button'>Carrello</a>");
+        out.println("</div></center><div class='col-sm-12 text-left'>");
+        out.println("<center><button type='submit' class='btn btn-primary'>Acquista</button>");
+        out.println("<a class='btn btn-secondary' href='vendita?operazione=carrello' role='button'>Carrello</a></center>");
         out.println("</div>");
         out.println("</div>");
         fineRisposta(out);
