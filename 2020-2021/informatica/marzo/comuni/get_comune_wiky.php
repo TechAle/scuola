@@ -24,7 +24,7 @@ function getInfo($comune, $conn, $provincia, $regione) {
     $ris = $conn->query($query) or die("Errore esecuzione " . $query);
     $values = $ris->fetch_row();
 
-    echo sprintf('<br><iframe 
+    echo sprintf('<iframe 
                   width="300" 
                   height="100" 
                   frameborder="0" 
