@@ -65,15 +65,15 @@ else if (isset($_GET["creatabelle"])) {
         $geoTable = " create table geo (
                         istat int unsigned primary key,
                         comune varchar(50) not null,
-                        lng varchar(30) not null,
-                        lat varchar(30) not null
+                        lng varchar(50) not null,
+                        lat varchar(50) not null
                     )";
         $infoTable = "create table info (
                         istat int unsigned primary key,
                         comune varchar(50) not null,
                         abitanti varchar(80) not null,
-                        patrono_nome varchar(80) not null,
-                        patrono_data varchar(80) not null
+                        patrono_nome tinytext not null,
+                        patrono_data tinytext not null
                     )";
         $municTable = "create table munic (
                         istat int unsigned primary key,
@@ -185,13 +185,12 @@ else if (isset($_GET["popola"])) {
     carica("./dataset/italy_cities.xlsx", "citta", $connessione);
     carica("./dataset/italy_munic.xlsx", "munic", $connessione);
     carica("./dataset/italy_info.xlsx", "info", $connessione);
-    carica("./dataset/italy_geo.xlsx", "geo", $connessione);
+    carica2("./dataset/italy_geo.csv", "geo", $connessione);
     carica1("./dataset/italy_cap.xlsx", "cap", $connessione);
 
 
 }
 if (isset($_GET["es"])) {
-
     echo "Risultato query [".$_GET["libera"]."]: <br>";
     $connessione->select_db("comuni");
     $ris = $connessione->query($_GET["libera"]);
