@@ -90,7 +90,7 @@
         }
         .colonna2 {
             margin-left: 15px;
-            width: 93%;
+            width: 100%;
             display: block;
         }
         .scelto {
@@ -98,19 +98,17 @@
         }
     </style>
 
+    <script src="./package/dist/Chart.min.js"></script>
+
+
 </head>
 <body>
 
 <header>
-    <form action="popolazione.php">
-    <input class="button shadow" type="submit" value="Grafico popolazione">
+    <form action="home.php">
+        <input class="button shadow" type="submit" value="indietro">
     </form>
-    <button class="button shadow" id="dinamico">Dinamico</button>
-    <form id="patrono">
-        <label>
-            Patrono: <input type="text" name="patrono" placeholder=" " class="shadow">
-        </label>
-    </form>
+
 </header>
 
 <div id="main" class="shadow">
@@ -148,76 +146,19 @@
                 </form>
             </div>
             <div class="column" style="border-style: hidden solid hidden hidden;">
-                PROVINCE
-                <form method="get">
-                <?php
-                if (isset($_GET["regione"])) {
-                    // Prendo la provincia se l'abbiamo selezionata
-                    if(isset($_GET["provincia"])) {
-                        $selezionato = $connessione->real_escape_string($_GET["provincia"]);
-                    }
-
-                    $value = $connessione->real_escape_string($_GET["regione"]);
-                    // Prendo tutte le varie province
-                    $query = "select DISTINCT prov.provincia from citta, prov where citta.regione = '".$value."' && citta.provincia = prov.sigle";
-                    $ris = $connessione->query($query) or die("Errore esecuzione query " . $query);
-                    if ($ris) {
-                        if ($ris->num_rows > 0) {
-                            // Rendo invisibile il nostro valore hidden per ricordo
-                            echo "<input type='hidden' name='regione' value='" . $value . "'>";
-                            $numRighe = $ris->num_rows;
-                            // Stampo
-                            while($row = $ris->fetch_row())
-                            {
-                                // Se l'avevamo già selezionato, giallo
-                                $add = "";
-                                if ($selezionato == $connessione->real_escape_string($row[0]))
-                                    $add = "scelto";
-                                // Inserisco
-                                echo '<input type="submit" value="'.$row[0].'" name="provincia" class="colonna2 '.$add.'">';
-                            }
-
-                        } else die("Non è stata trovata la regione");
-                    }
-                }
-                ?>
-                </form>
+                Popolazione
+                <div id="container" style="width: 98%; margin-left: 5px;">
+                    <canvas id="canvas2"></canvas>
+                </div>
             </div>
-            <div class="column">COMUNI
-                <form method="get" action="comune.php">
-                <?php
+            <div class="column">
+                Estensione
+                <div id="container" style="width: 98%; margin-left: 5px;">
+                    <canvas id="canvas"></canvas>
+                </div>
 
-                if(isset($_GET["provincia"]) && isset($_GET["regione"])) {
-                    $regione = $connessione->real_escape_string($_GET["regione"]);
-                    $provincia = $connessione->real_escape_string($_GET["provincia"]);
-                    echo "<input type='hidden' name='regione' value='" . $regione . "'>";
-                    echo "<input type='hidden' name='provincia' value='" . $provincia . "'>";
-                    // Prendo il codice della provincia
-                    $query = "select sigle from prov where provincia like '" . $provincia . "'";
-                    $ris = $connessione->query($query) or die("Errore esecuzione query " . $query);
-                    if ($ris) {
-                        if ($ris->num_rows > 0) {
-                            $prov = $ris->fetch_row()[0];
-                            // Cerco tutti i comuni
-                            $query = "select DISTINCT citta.comune from citta where citta.regione = '".$regione."' && citta.provincia = '".$prov."'";
-                            $ris = $connessione->query($query) or die ("Errore esecuzione query " . $query);
-                            if ($ris->num_rows > 0 ) {
-                                $numRighe = $ris->num_rows;
-                                // Stampo
-                                while($row = $ris->fetch_row())
-                                {
-                                    // Inserisco
-                                    echo '<input type="submit" value="'.$row[0].'" name="comune" class="colonna2 ">';
-                                }
-                            } else die ("Non sono state trovate delle citta nella query " . $query);
-                        }else die("Non è stata trovata la provincia/regione");
-
-                    }
-                }
-
-                ?>
-                </form>
             </div>
+
         </div>
     </div>
 </div>
@@ -227,6 +168,101 @@
         Sito creato da Condello Alessandro per scopi didattici
     </div>
 </footer>
+
+<script>
+    <?php
+    require "parametri.php";
+    $connessione = new mysqli($db_host,$db_user,$db_pass, "comuni");
+    $query =   'SELECT sum(superficie), regione FROM citta
+                group by(regione)
+                order by sum(superficie)';
+    $ris = $connessione->query($query) or die("Errore creazione grafico superficie");
+    if ($ris->num_rows > 0) {
+        $numRighe = $ris->num_rows;
+        // Stampo
+        $regioni = "";
+        $data = "";
+        while($row = $ris->fetch_row())
+        {
+            $data .= $row[0] . ",";
+            $regioni .= "'" . $row[1] . "',";
+        }
+    }else die("DataBase vuoto");
+    ?>
+    var ctx = document.getElementById("canvas").getContext('2d');
+    var myChart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels:[<?php echo $regioni ?>],
+            datasets: [{
+                label : 'provincia',
+                backgroundColor: [
+                    <?php
+                    require "randomColor.php";
+                    for($i = 0; $i < count(explode(",", $regioni)); $i++) {
+                        echo getRandomColor();
+                    }
+                    ?>
+                ],
+                data:[<?php echo $data ?>],
+            }]
+        },
+
+    });
+
+    <?php
+    $ok = 0;
+    if (isset($_GET["regione"])) {
+
+        $query =   'select sum(num_residenti), prov.provincia from citta, prov
+                        where citta.provincia like prov.sigle and citta.regione like "'.$connessione->real_escape_string($_GET["regione"]).'"
+                        group by prov.provincia
+                        order by sum(num_residenti) desc';
+        $ris = $connessione->query($query);
+
+        if ($ris->num_rows > 0) {
+            $numRighe = $ris->num_rows;
+            // Stampo
+            $provincie = "";
+            $data = "";
+            while($row = $ris->fetch_row())
+            {
+                $data .= $row[0] . ",";
+                $provincie .= "'" . $row[1] . "',";
+            }
+            $ok = 1;
+        }else die("DataBase vuoto");
+
+
+    }
+
+    ?>
+    var prova = <?php if($ok == 1) echo "true"; else echo "false"; ?>;
+    if (prova) {
+        var ctx2 = document.getElementById("canvas2").getContext("2d");
+        var myChart2 = new Chart(ctx2, {
+            type: "bar",
+            data: {
+                labels:[<?php if($ok == 1) echo $provincie ?>],
+                datasets: [{
+                    backgroundColor: [
+                        <?php
+                        if ($ok == 1) {
+                            for($i = 0; $i < count(explode(",", $provincie)); $i++) {
+                                echo getRandomColor();
+                            }
+                        }
+                        ?>
+                    ],
+                    data:[<?php if($ok == 1) echo $data ?>],
+                }]
+            },
+
+        });
+    }
+
+</script>
+
 
 </body>
 </html>
