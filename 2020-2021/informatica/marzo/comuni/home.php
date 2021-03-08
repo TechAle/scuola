@@ -105,7 +105,9 @@
     <form action="popolazione.php">
     <input class="button shadow" type="submit" value="Grafico popolazione">
     </form>
-    <button class="button shadow" id="dinamico">Dinamico</button>
+    <form action="dinamico.php" id="dinamico">
+        <input class="button shadow" type="submit" value="Dinamico">
+    </form>
     <form id="patrono" action="autosuggestion.php" method="get">
         <label>
             Patrono: <input type="text" name="patrono" placeholder="San Massimo" class="shadow">
