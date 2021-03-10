@@ -121,7 +121,9 @@
 <body>
 
 <header>
-    <button class="button shadow">Indietro</button>
+    <form action="home.php">
+        <input class="button shadow" type="submit" value="indietro">
+    </form>
 </header>
 
 

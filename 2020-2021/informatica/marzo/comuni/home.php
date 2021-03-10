@@ -96,7 +96,13 @@
         .scelto {
             background-color: #f5dda9;
         }
+        #sugg {
+            font-size: 14px;
+            padding-top: 3px;
+        }
     </style>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
 </head>
 <body>
@@ -110,12 +116,46 @@
     </form>
     <form id="patrono" action="autosuggestion.php" method="get">
         <label>
-            Patrono: <input type="text" name="patrono" placeholder="San Massimo" class="shadow">
+            Patrono: <input type="text" name="patrono" placeholder="San Massimo" class="shadow" id="c">
         </label>
-
-        <input type="submit" value="invia">
+        <input type="submit" value="invia"><br>
+        <div id="sugg">Suggerimento: <span id="risultato"><?php
+                require "parametri.php";
+                $selezionato = "";
+                $connessione = new mysqli($db_host,$db_user,$db_pass);
+                $connessione->select_db("comuni");
+                if(isset($_POST["patrono"])) {
+                    $sql = "select info.patrono_nome from info where CHAR_LENGTH(info.patrono_nome) >= CHAR_LENGTH('".$_POST['patrono']."') and left(info.patrono_nome, CHAR_LENGTH('".$_POST['patrono']."')) = '".$_POST['patrono']."' limit 1";
+                    $ris = $connessione->query($sql) or die("Errore esecuzione query");
+                    if ($ris->num_rows > 0) {
+                        echo $ris->fetch_row()[0];
+                    }
+                }
+                ?></span></div>
+        <div id="ris"></div>
     </form>
 </header>
+
+<script>
+    var a;
+    $(document).ready(function(){
+        $('#c').bind('input', function() {
+            /* This will be fired every time, when textbox's value changes. */
+            var output = document.getElementById("c").value;
+
+            $.ajax({
+                type: "POST", url: "home.php",
+                data: 'patrono=' + output,
+                success: function (risposta) {
+                    var content = $( risposta ).find( "#risultato" );
+                    a = content;
+                    $( "#risultato" ).empty().append( content );
+                }
+            });
+        } );
+    })
+
+</script>
 
 <div id="main" class="shadow">
     <div>
@@ -124,10 +164,6 @@
                 <form method="get">
                     <?php
                     // Entro nel db
-                    require "parametri.php";
-                    $selezionato = "";
-                    $connessione = new mysqli($db_host,$db_user,$db_pass);
-                    $connessione->select_db("comuni");
                     // Prendo, se lo abbiamo, ciò che avevamo selezionato
                     if(isset($_GET["regione"])) {
                         $selezionato = $connessione->real_escape_string($_GET["regione"]);

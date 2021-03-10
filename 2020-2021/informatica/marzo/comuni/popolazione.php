@@ -241,7 +241,7 @@
     if (prova) {
         var ctx2 = document.getElementById("canvas2").getContext("2d");
         var myChart2 = new Chart(ctx2, {
-            type: "bar",
+            type: "pie",
             data: {
                 labels:[<?php if($ok == 1) echo $provincie ?>],
                 datasets: [{
