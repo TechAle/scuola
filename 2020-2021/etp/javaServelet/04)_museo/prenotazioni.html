@@ -174,12 +174,38 @@
                             color: #008000;
                         }
 
+                        #verde + *::before {
+                            content: "";
+                            display: inline-block;
+                            vertical-align: bottom;
+                            width: 1rem;
+                            height: 1rem;
+                            margin-right: 0.3rem;
+                            border-radius: 50%;
+                            border-style: solid;
+                            border-width: 0.15rem;
+                            border-color: gray;
+                            background-color: green;
+                        }
+
+                        #verde:checked + *::before {
+                            background: radial-gradient(green 0%, green 40%, transparent 50%, transparent);
+                            border-color: green;
+                        }
+                        #verde:checked + * {
+                            color: #008000;
+                        }
+
                     </style>
                     <div style="padding-top: 3px; padding-bottom: 4px">
                     <label>
                         <input type="radio" name="color" id="rosso" value="rosso" checked />
                         <span></span>
                     </label>
+                        <label>
+                            <input type="radio" name="color" id="verde" value="verde"  />
+                            <span></span>
+                        </label>
                     </div>
                     <input type="submit" value="Ricerca" name="ricerca">
                 </form>
