@@ -108,7 +108,7 @@
 
 
         fieldset {
-           width: 300px;
+            width: 300px;
 
         }
 
@@ -155,84 +155,84 @@
                 <h1 style="text-align: center">Acquisti</h1>
                 <i>Inserire i suoi dati per potere acquistare una visita nella data a  lei desiderata</i>
                 <center>
-                <form action="shopping.html" method="get" id="form_prenotazione">
-                    <fieldset>
-                        <p><label>Nome:
-                            <input type="text" name="nome" style="margin-left: 7px">
-                        </label></p><br>
-                        <p><label>Data:
-                            <input type="date" name="data" style="margin-left: 7px">
-                        </label></p><br>
-                        <p><label>Area Prenotazione:
-                            <input required type="text" name="area" style="margin-left: 7px">
-                        </label></p><br>
-                        <p><label>Numero partecipanti:
-                            <input required type="number" name="numero" style="margin-left: 7px">
-                        </label></p><br>
-                        <style>
-                            label > input[type="radio"] {
-                                display: none;
-                            }
+                    <form action="shopping.html" method="get" id="form_prenotazione">
+                        <fieldset>
+                            <p><label>Nome:
+                                <input type="text" name="nome" style="margin-left: 7px">
+                            </label></p><br>
+                            <p><label>Data:
+                                <input type="date" name="data" style="margin-left: 7px">
+                            </label></p><br>
+                            <p><label>Area Prenotazione:
+                                <input required type="text" name="area" style="margin-left: 7px">
+                            </label></p><br>
+                            <p><label>Numero partecipanti:
+                                <input required type="number" name="numero" style="margin-left: 7px">
+                            </label></p><br>
+                            <style>
+                                label > input[type="radio"] {
+                                    display: none;
+                                }
 
-                            #rosso + *::before {
-                                content: "";
-                                display: inline-block;
-                                vertical-align: bottom;
-                                width: 1rem;
-                                height: 1rem;
-                                margin-right: 0.3rem;
-                                border-radius: 50%;
-                                border-style: solid;
-                                border-width: 0.15rem;
-                                border-color: gray;
-                                background-color: red;
-                            }
+                                #rosso + *::before {
+                                    content: "";
+                                    display: inline-block;
+                                    vertical-align: bottom;
+                                    width: 1rem;
+                                    height: 1rem;
+                                    margin-right: 0.3rem;
+                                    border-radius: 50%;
+                                    border-style: solid;
+                                    border-width: 0.15rem;
+                                    border-color: gray;
+                                    background-color: red;
+                                }
 
-                            #rosso:checked + *::before {
-                                background: radial-gradient(red 0%, red 40%, transparent 50%, transparent);
-                                border-color: red;
-                            }
-                            #rosso:checked + * {
-                                color: #008000;
-                            }
+                                #rosso:checked + *::before {
+                                    background: radial-gradient(red 0%, red 40%, transparent 50%, transparent);
+                                    border-color: red;
+                                }
+                                #rosso:checked + * {
+                                    color: #008000;
+                                }
 
-                            #verde + *::before {
-                                content: "";
-                                display: inline-block;
-                                vertical-align: bottom;
-                                width: 1rem;
-                                height: 1rem;
-                                margin-right: 0.3rem;
-                                border-radius: 50%;
-                                border-style: solid;
-                                border-width: 0.15rem;
-                                border-color: gray;
-                                background-color: green;
-                            }
+                                #verde + *::before {
+                                    content: "";
+                                    display: inline-block;
+                                    vertical-align: bottom;
+                                    width: 1rem;
+                                    height: 1rem;
+                                    margin-right: 0.3rem;
+                                    border-radius: 50%;
+                                    border-style: solid;
+                                    border-width: 0.15rem;
+                                    border-color: gray;
+                                    background-color: green;
+                                }
 
-                            #verde:checked + *::before {
-                                background: radial-gradient(green 0%, green 40%, transparent 50%, transparent);
-                                border-color: green;
-                            }
-                            #verde:checked + * {
-                                color: #008000;
-                            }
+                                #verde:checked + *::before {
+                                    background: radial-gradient(green 0%, green 40%, transparent 50%, transparent);
+                                    border-color: green;
+                                }
+                                #verde:checked + * {
+                                    color: #008000;
+                                }
 
-                        </style>
-                        <div style="padding-top: 3px; padding-bottom: 4px">
-                            <label>
-                                <input type="radio" name="color" id="rosso" value="rosso" checked />
-                                <span></span>
-                            </label>
-                            <label>
-                                <input type="radio" name="color" id="verde" value="verde"  />
-                                <span></span>
-                            </label>
-                        </div>
+                            </style>
+                            <div style="padding-top: 3px; padding-bottom: 4px">
+                                <label>
+                                    <input type="radio" name="color" id="rosso" value="rosso" checked />
+                                    <span></span>
+                                </label>
+                                <label>
+                                    <input type="radio" name="color" id="verde" value="verde"  />
+                                    <span></span>
+                                </label>
+                            </div>
 
-                        <input type="submit" value="Invia i dati" name="invia" style="margin-top: 10px">
-                    </fieldset>
-                </form>
+                            <input type="submit" value="Invia i dati" name="invia" style="margin-top: 10px">
+                        </fieldset>
+                    </form>
                 </center>
                 <div id="risultato" class="">
 
