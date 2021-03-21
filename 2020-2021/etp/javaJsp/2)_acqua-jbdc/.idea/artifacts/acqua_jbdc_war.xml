@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="acqua-jbdc:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>acqua-jbdc</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="acqua-jbdc-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="acqua-jbdc:war exploded" />
+    </root>
+  </artifact>
+</component>
