@@ -1,4 +1,7 @@
 <?php
+
+use PHPMailer\PHPMailer\PHPMailer;
+
 session_start();
 $db_host = "";
 $db_user = "";
@@ -6,15 +9,123 @@ $db_pass = "";
 $db_name = "";
 include "parametri.php";
 $conn = new mysqli($db_host,$db_user,$db_pass, $db_name) or die("Errore connessione server");
-if (isset($_GET["errore"])) {
-    echo "<script>alert('Area non permessa')</script>";
+
+function generateRandomString($length = 10) {
+    $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    $charactersLength = strlen($characters);
+    $randomString = '';
+    for ($i = 0; $i < $length; $i++) {
+        $randomString .= $characters[rand(0, $charactersLength - 1)];
+    }
+    return $randomString;
 }
 
-if (isset($_GET["visualizza"])) {
+if (isset($_GET["messaggio"])) {
+    echo "<script>alert('Messaggio: ".$_GET['messaggio']."')</script>";
+}
+
+if (isset($_POST["invia_password"])) {
+    if (isset($_SESSION["grado"])) {
+        if ($_SESSION["grado"] != "")
+            header('Location: '.$_SERVER['PHP_SELF'] . "?messaggio=errore:area_non_permessa");
+    }
+    $id = $conn->real_escape_string($_POST["id"]);
+    $password = $conn->real_escape_string($_POST["password"]);
+    $token = $conn->real_escape_string($_POST["token"]);
+    $query = "call abilita_utenti('".$id."', '".$password."', '".$token."', @success);";
+    $ris = $conn->query($query);
+    $value = $ris->fetch_row()[0];
+    if ($value == 0)
+        header('Location: '.$_SERVER['PHP_SELF'] . "?messaggio=errore:nome_non_trovato");
+    else header('Location: '.$_SERVER['PHP_SELF'] . "?messaggio=info:registrazione_effettuata");
+}
+
+if (isset($_POST["invia_crea_utente"])) {
+    if ($_SESSION["grado"] == 1) {
+        // Creo account
+        $string = generateRandomString();
+        $query = "call aggiungi_utenti('".$_POST['nome']."', '".$_POST['cognome']."', '".$_POST['data']."', '".$_POST['email']."', '".$_POST['circolareCrea']."', '".$string."');";
+        $conn->query($query);
+        // Keys: name type tmp_name error size
+        $file = $_FILES["foto"];
+        $estenzioni_consentite = array("png");
+        if (in_array($ext = strtolower(explode('.', $file["name"])[array_key_last(explode('.', $file["name"]))]), $estenzioni_consentite)) {
+            move_uploaded_file($file["tmp_name"], "./usr/" . $_POST["email"] . ".png");
+        }
+        if (false) {
+            // Invio email
+            require "./phpmailer/PHPMailer.php";
+            require "./phpmailer/SMTP.php";
+            require "./phpmailer/Exception.php";
+
+            $mail = new PHPMailer(true);
+
+            //Set PHPMailer to use SMTP.
+            $mail->isSMTP();
+            //Set SMTP host name
+            $mail->Host = "smtp.gmail.com";
+            //Set this to true if SMTP host requires authentication to send email
+            $mail->SMTPAuth = true;
+            //Provide username and password
+            $mail->Username = "alessandro.condello@studenti.fauser.edu";
+            $mail->Password = "Password Segreta";
+            //If SMTP requires TLS encryption then set it
+            $mail->SMTPSecure = "tls";
+            //Set TCP port to connect to
+            $mail->Port = 587;
+
+            $mail->From = $_POST["email"];
+            $mail->FromName = "Alessandro Condello";
+
+            $mail->addAddress($_POST["email"], "Operatore");
+
+            $mail->isHTML(true);
+
+            $sql = "select idutente, token from UTENTI where email like " . $conn->real_escape_string($_POST["email"]);
+            $result = $conn->query($sql);
+            $value = $result->fetch_row();
+
+
+            $id = $value[0];
+            $token = $value[1];
+            $mail->Subject = "Registrazione";
+            $mail->Body = "<h1>Registrazione</h1><br>" . "Si può registrare inserendo id " . $id . " e token" . $token;
+            $mail->AltBody = "Si può registrare inserendo id " . $id . " e token" . $token;
+
+            try {
+                $mail->send();
+            } catch (Exception $e) {
+                header('Location: ' . $_SERVER['PHP_SELF'] . "?messaggio=errore:invio_email");
+            }
+        }
+        header('Location: '.$_SERVER['PHP_SELF'] . "?messaggio=info:controllare_email");
+
+    } else header('Location: '.$_SERVER['PHP_SELF'] . "?messaggio=errore:area_non_permessa");
+}
+
+if (isset($_POST["invia_creazione"])) {
+    if ($_SESSION["grado"] == 2) {
+        $titolo = $conn->real_escape_string($_POST["titolo"]);
+        $diretto = $conn->real_escape_string($_POST["circolareCrea"]);
+        // Creo account
+        $query = "call aggiungi_circolari('".$titolo."', '".$diretto."');";
+        $conn->query($query);
+        // Keys: name type tmp_name error size
+        $file = $_FILES["pdf"];
+        $estenzioni_consentite = array("pdf");
+        if (in_array($ext = strtolower(explode('.', $file["name"])[array_key_last(explode('.', $file["name"]))]), $estenzioni_consentite)) {
+            move_uploaded_file($file["tmp_name"], "./pdf/" . $titolo . ".pdf");
+        }
+        header('Location: '.$_SERVER['PHP_SELF'] . "?messaggio=info:pdf_creato");
+
+    } else header('Location: '.$_SERVER['PHP_SELF'] . "?messaggio=errore:area_non_permessa");
+}
+
+if (isset($_GET["leggi_circolari"])) {
     if (isset($_SESSION["grado"])) {
         $val = $_SESSION["grado"];
         if ($val != 3 && $val != 4) {
-            header('Location: '.$_SERVER['PHP_SELF'] . "?errore");
+            header('Location: '.$_SERVER['PHP_SELF'] . "?messaggio=errore:area_non_permessa");
         }
     }
 }
@@ -23,7 +134,7 @@ if (isset($_GET["crea_circolari"])) {
     if (isset($_SESSION["grado"])) {
         $val = $_SESSION["grado"];
         if ($val != 2) {
-            header('Location: '.$_SERVER['PHP_SELF'] . "?errore");
+            header('Location: '.$_SERVER['PHP_SELF'] . "?messaggio=errore:area_non_permessa");
         }
     }
 }
@@ -32,8 +143,15 @@ if (isset($_GET["crea_utente"])) {
     if (isset($_SESSION["grado"])) {
         $val = $_SESSION["grado"];
         if ($val != 1) {
-            header('Location: '.$_SERVER['PHP_SELF'] . "?errore");
+            header('Location: '.$_SERVER['PHP_SELF'] . "?messaggio=errore:area_non_permessa");
         }
+    }
+}
+
+if (isset($_GET["registrazione"])) {
+    if (isset($_SESSION["grado"])) {
+        if ($_SESSION["grado"] != "")
+            header('Location: '.$_SERVER['PHP_SELF'] . "?messaggio=errore:area_non_permessa");
     }
 }
 
@@ -60,6 +178,10 @@ if (isset($_GET["logout"])) {
 }
 
 if (isset($_POST["loginBut"])) {
+    if (isset($_SESSION["grado"])) {
+        if ($_SESSION["grado"] != "")
+            header('Location: '.$_SERVER['PHP_SELF'] . "?messaggio=errore:area_non_permessa");
+    }
     $email = $conn->real_escape_string($_POST["email"]);
     $password = $conn->real_escape_string($_POST["password"]);
     $query = "SELECT * FROM utenti u where u.email like '".$email."'
@@ -94,6 +216,7 @@ if (isset($_SESSION["id"])) {
 <html lang="it">
 
     <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <meta name="viewport" content="width=device-width, user-scalable=no">
         <link href='https://fonts.googleapis.com/css?family=Comfortaa:400,300,700|Open+Sans:100,400,300,600'
               rel='stylesheet' type='text/css'>
@@ -101,7 +224,6 @@ if (isset($_SESSION["id"])) {
         <link rel="stylesheet" href="style.css">
         <script type="text/javascript" src="script.js"></script>
         <title>Fauser</title>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <style>
             /* Questo viene abilitato solamente se è un amministratore */
             #notifiche {
@@ -166,9 +288,9 @@ if (isset($_SESSION["id"])) {
             }
 
             /* Questo viene abilitato quando dobbiamo confermare la registrazione*/
-            #conferma {
+            #registrazione {
                 display: <?php
-                if (isset($_GET["conferma"])) {
+                if (isset($_GET["registrazione"])) {
                     echo "initial";
                     $found = true;
                 } else echo "none";
@@ -255,32 +377,147 @@ if (isset($_SESSION["id"])) {
                     <h3 style="text-align: center">Chi vuoi vedere?</h3>
                     <form method="get">
                         <input checked type="radio" id="circolareTutti"
-                               name="circolare" value="self">
+                               name="circolare" value="<?php
+                                if ($gradoTxt != "") {
+                                    echo $gradoTxt;
+                                }
+                               ?>">
                         <label for="circolareTutti"><?php
                             if ($gradoTxt != "") {
                                 echo $gradoTxt;
                             }
                             ?></label>
                         <input type="radio" id="circolareVisione"
-                               name="circolare" value="self">
-                        <label for="circolareVisione">tutti</label>
+                               name="circolare" value="Entrambi">
+                        <label for="circolareVisione">Entrambi</label>
 
                     </form>
 
 
-                    <table>
-                        <tr>
-                            <th>Circolare</th>
-                        </tr>
-                        <tr>
-                            <td>NOME CIRCOLARE</td>
-                        </tr>
+                    <div id="ciao">
+                        <?php
+                        $ric = "";
+                        $output = "";
+                        if (isset($_POST["volere"])) {
+                            $ric = $_POST["volere"];
+                            if ($ric == "Entrambi") {
+                                if ($gradoTxt == "Studente")
+                                    $volere = 4;
+                                else
+                                    $volere = 3;
+                                $query = "select * from CIRCOLARI c where c.diretto = -1 or c.diretto = " . $volere;
+                            } else {
+                                if ($gradoTxt == "Studente")
+                                    $volere = 4;
+                                else
+                                    $volere = 3;
+                                $query = "select * from CIRCOLARI c where c.diretto = " . $volere;
+                            }
+                            $ris = $conn->query($query);
+                            if ($ris) {
+                                $numRighe = $ris->num_rows;
+                                echo '<table>
+                                        <tr>
+                                            <th>Numero</th>
+                                            <th>Nome</th>
+                                        </tr>';
+                                while ($row = $ris->fetch_row()) {
+                                    echo "<tr><th>".$row[0]."</th><th><a href='./pdf/".$row[1].".pdf'>".$row[1]."</a></th></tr>";
+
+                                }
+                                echo"</table>";
+                            }
+                        }
+                        ?>
+                    </div>
+
+                    <table id="risultato">
+
+                        <?php
+
+                        if ($gradoTxt != "") {
+                            if ($output == "") {
+                                if ($ric == "")
+                                    $ric = $gradoTxt;
+                                $query = "";
+                                if ($ric == "Entrambi") {
+                                    if ($gradoTxt == "Studente")
+                                        $volere = 4;
+                                    else
+                                        $volere = 3;
+                                    $query = "select * from CIRCOLARI c where c.diretto = -1 or c.diretto = " . $volere;
+                                } else {
+                                    if ($gradoTxt == "Studente")
+                                        $volere = 4;
+                                    else
+                                        $volere = 3;
+                                    $query = "select * from CIRCOLARI c where c.diretto = " . $volere;
+                                }
+                                $ris = $conn->query($query);
+                                if ($ris) {
+                                    $numRighe = $ris->num_rows;
+                                    echo sprintf('
+                                        <tr>
+                                            <th>Numero</th>
+                                            <th>Nome</th>
+                                        </tr>');
+                                    while ($row = $ris->fetch_row()) {
+                                        echo sprintf("<tr><th>%s</th><th><a href='./pdf/%s.pdf'> %s</a></th></tr>", $row[0], $row[1], $row[1]);
+
+                                    }
+                                    echo sprintf('');
+                                }
+                            } else {
+                                echo $output;
+                            }
+                        }
+                        ?>
                     </table>
+
+
+
+                    <script>
+                        var a;
+
+                        $(document).ready(function () {
+                            $('input:radio[name=circolare]').change(function () {
+                                var output = this.value;
+                                $.ajax({
+                                    type: "POST", url: "index.php?leggi_circolari",
+                                    data: 'volere=' + output,
+                                    success: function (risposta) {
+                                        var content = $( risposta ).find( "#risultato" );
+                                        a = risposta;
+                                        $( "#risultato" ).empty().append( content );
+                                    }
+                                });
+                            });
+                        });
+
+                        /*
+                        $(document).ready(function(){
+                            $("#circolareTutti").change(function(){
+                                var output = this.value;
+                                $.ajax({
+                                    type: "POST", url: "index.php?registrazione",
+                                    data: 'volere=' + output,
+                                    success: function (risposta) {
+                                        var content = $( risposta ).find( "#risultato" );
+                                        a = risposta;
+                                        $( "#risultato" ).empty().append( content );
+                                    }
+                                });
+                            });
+                        });*/
+
+                    </script>
                 </div>
+
+
 
                 <div id="crea_circolari">
                     <h3 style="text-align: center">Creazione Circolari</h3>
-                    <form method="get">
+                    <form method="post" action="index.php" enctype='multipart/form-data'>
 
                         <fieldset>
                         <label>
@@ -290,22 +527,22 @@ if (isset($_SESSION["id"])) {
                                 Allegato <input type="file" name="pdf">
                             </label><br>
                             <input checked type="radio" id="circolareCrea"
-                                   name="circolareCrea" value="studenti">
-                            <label for="circolareCrea">Studenti</label>
+                                   name="circolareCrea" value="Studente">
+                            <label for="circolareCrea">Studente</label>
                             <input type="radio" id="circolareCrea1"
-                                   name="circolareCrea" value="docenti">
-                            <label for="circolareCrea1">Docenti</label>
+                                   name="circolareCrea" value="Docente">
+                            <label for="circolareCrea1">Docente</label>
                             <input type="radio" id="circolareCrea2"
                                    name="circolareCrea" value="Entrambi">
                             <label for="circolareCrea2">Entrambi</label><br>
-                            <input type="submit" value="invia" name="invia">
+                            <input type="submit" value="invia" name="invia_creazione">
                         </fieldset>
                     </form>
                 </div>
 
                 <div id="crea_utente">
                     <h3 style="text-align: center">Creazione Utente</h3>
-                    <form method="get">
+                    <form method="post" action="index.php" enctype='multipart/form-data'>
 
                         <fieldset>
                             <label>
@@ -321,15 +558,18 @@ if (isset($_SESSION["id"])) {
                                 Email <input type="email" name="email">
                             </label><br>
                             <label>
-                                Foto <input type="file" name="foto">
+                                Foto (.png) <input type="file" name="foto">
                             </label><br>
                             <input checked type="radio" id="creaUtente"
-                                   name="circolareCrea" value="studenti">
+                                   name="circolareCrea" value="Studente">
                             <label for="crea_utente">Studente</label>
                             <input type="radio" id="crea_utente1"
-                                   name="circolareCrea" value="docenti">
+                                   name="circolareCrea" value="Docente">
                             <label for="crea_utente1">Docente</label><br>
-                            <input type="submit" value="invia" name="invia">
+                            <input type="radio" id="crea_utente2"
+                                   name="circolareCrea" value="Presidenza">
+                            <label for="crea_utente2">Presidenza</label><br>
+                            <input type="submit" value="invia" name="invia_crea_utente">
                         </fieldset>
                     </form>
                 </div>
@@ -350,21 +590,21 @@ if (isset($_SESSION["id"])) {
                     </form>
                 </div>
 
-                <div id="conferma">
+                <div id="registrazione">
                     <h3 style="text-align: center">Conferma Registrazione</h3>
-                    <form method="get">
+                    <form method="post" action="index.php">
 
                         <fieldset>
                             <label>
-                                email <input type="text" name="email">
+                                id <input type="text" name="id">
                             </label><br>
                             <label>
-                                password Temporanea <input type="password" name="password_temp">
+                                password <input type="password" name="password">
                             </label><br>
                             <label>
-                                password Definitiva <input type="password" name="password_def">
+                                token <input type="password" name="token">
                             </label><br>
-                            <input type="submit" value="invia" name="invia">
+                            <input type="submit" value="invia" name="invia_password">
                         </fieldset>
                     </form>
                 </div>
@@ -403,7 +643,8 @@ if (isset($_SESSION["id"])) {
                     <li><a href="?">Home<i class="fa fa-home fa-2x"></i></a><span></span></li>
                     <li><a href="?leggi_circolari">Visualizza Circolari<i class="fa fa-envelope fa-2x"></i></a><span></span></li>
                     <li><a href="?crea_circolari">Crea Circolari<i class="fa fa-book fa-2x"></i></a><span></span></li>
-                    <li><a href="?account=1">Nuovo Account<i class="fa fa-users fa-2x"></i></a><span></span></li>
+                    <li><a href="?crea_utente">Nuovo Account<i class="fa fa-users fa-2x"></i></a><span></span></li>
+                    <li><a href="?registrazione">Registrazione<i class="fa fa-users fa-2x"></i></a><span></span></li>
                     <?php
                     if ($nome == "") {
                         echo '<li><a href="?login=1">Login<i class="fa fa-sign-in fa-2x"></i></a><span></span></li>';
