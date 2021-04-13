@@ -70,7 +70,7 @@ CREATE FUNCTION isDemo ( idxNome integer)
     RETURNS integer unsigned
 
 BEGIN
-    RETURN (select idUtente from db11465.utente u where u.idUtente = idxNome and u.demo = true);
+    RETURN (select idUtente from db11465.utente u where u.idUtente = idxNome and u.demo = 1);
 end;
 //
 DELIMITER ;
@@ -122,6 +122,7 @@ DELIMITER ;
  0 : Username non esistente
  1 : Password sbagliata
  2 : Login fatto con successo
+ 3 : Login con successo ed è demo
  */
 DROP PROCEDURE IF EXISTS login;
 DELIMITER //
@@ -137,6 +138,39 @@ BEGIN
     if (@idx is not null ) THEN
         SET success = 1;
         SET @suc = (select rightPassword(@idx, prmPassword));
+        if (@suc is not null) THEN
+            SET success = 2;
+            SET @demo = (select isDemo(@idx));
+            if (@demo is not null) THEN
+                SET success = 3;
+            end if;
+        end if;
+    end if;
+
+    select success;
+end; //
+DELIMITER ;
+
+## Procedura per il login demo
+/*
+ Valori di ritorno:
+ 0 : Username non esistente
+ 1 : Username non demo
+ 2 : Login fatto con successo
+ */
+DROP PROCEDURE IF EXISTS loginDemo;
+DELIMITER //
+CREATE PROCEDURE loginDemo (
+    prmUsername nvarchar(30),
+    ## Valore di ritorno
+    out success integer
+)
+BEGIN
+    SET @idx = (select getUsernameIdx(prmUsername));
+    SET success = 0;
+    if (@idx is not null ) THEN
+        SET success = 1;
+        SET @suc = (select isDemo(@idx));
         if (@suc is not null) THEN
             SET success = 2;
         end if;
@@ -200,6 +234,55 @@ BEGIN
 end; //
 DELIMITER ;
 
+/*
+ Valori di ritorno:
+ 0 : Username non esistente
+ 1 : Utente non abilitato al cambio
+ 2 : Password non corretta
+ 3 : Password cambiata
+ */
+DROP PROCEDURE IF EXISTS cambioPassNo;
+DELIMITER //
+CREATE PROCEDURE cambioPassNo (
+    prmUsername nvarchar(30),
+    prmPasswordNuova nvarchar(30),
+    ## Valore di ritorno
+    out success integer
+)
+BEGIN
+    ## Check if it exists
+    SET @idx = (select getUsernameIdx(prmUsername));
+    SET success = 0;
+
+    ## If yes
+    if (@idx is not null ) THEN
+        ## Check if it's enabled
+        SET success = 1;
+
+        SET @abil = (select isDemo(@idx));
+
+        ## If yes
+        if (@abil is not null) THEN
+            ## Check if the password is ok
+            SET success = 2;
+            ## If yes
+            if (true) THEN
+                SET success = 3;
+
+                SET @salt = ( select salt from utente u where u.idUtente = @idx );
+                SET @insPass = SHA2(CONCAT(@salt, prmPasswordNuova), 256);
+                UPDATE utente
+                SET password_hash = @insPass
+                where idUtente = @idx;
+            end if;
+        end if;
+
+
+    end if;
+
+    select success;
+end; //
+DELIMITER ;
 
 
 ## Aggiungiamo gli utenti
@@ -208,8 +291,8 @@ call aggiungi_utente('Giuno', 'Giorgio', 'Giovanna', 'password', false);
 call aggiungi_utente('DemoUsr', 'DemoNome', 'DemoCognome', 'demo', true);
 
 ## Aggiungiamo musiche
-call aggiungi_musica('provaTitolo1', 'provaCantante1', 150, 10.25);
-call aggiungi_musica('provaTitolo2', 'provaCantante2', 170, 9.25);
-call aggiungi_musica('provaTitolo3', 'provaCantante3', 100, 7.25);
-call aggiungi_musica('provaTitolo4', 'provaCantante4', 100, 7.25);
-call aggiungi_musica('provaTitolo5', 'provaCantante5', 100, 7.25);
+call aggiungi_musica('GoldenCate', 'Billy Murra', 150, 10.25);
+call aggiungi_musica('IceCream', 'Billy Murra', 170, 9.25);
+call aggiungi_musica('Mountain', 'Billy Murra', 100, 7.25);
+call aggiungi_musica('SunnySide', 'Billy Murra', 100, 7.25);
+call aggiungi_musica('Town', 'Billy Murra', 100, 7.25);

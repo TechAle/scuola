@@ -1,3 +1,17 @@
+<!--
+    File: logout.jsp
+
+    Autore: Alessandro Condello
+    Ultima modifica: 13/04/2021
+-->
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%
+    HttpSession sessions = request.getSession(false);
+    String id = (String) sessions.getAttribute("id");
+    if (id == null) {
+        response.sendRedirect("errore.jsp?errore=logout0");
+    }
+%>
 <!DOCTYPE html>
 <html lang="it">
 <head>
@@ -5,7 +19,7 @@
     <!-- mobile -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>MusikBox - Login</title>
+    <title>MusikBox - Logout</title>
     <!-- BootStrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -55,7 +69,7 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark position-absolute " id="nav">
 
     <div class="container" id="top">
-        <a class="navbar-brand" id="logo" href="#">
+        <a class="navbar-brand" id="logo" href="index.jsp">
             <img src="./logo/logo.png" alt="logo" id="logoSmall">        </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -63,20 +77,20 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="index.html">Home
+                    <a class="nav-link" href="index.jsp">Home
                     </a>
                 </li>
                 <li class="nav-item active">
-                    <a class="nav-link" href="login.html">Login / Logout</a>
+                    <a class="nav-link" href="login.jsp">Login</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="informazioni.html">Informazioni</a>
+                    <a class="nav-link" href="informazioni.jsp">Informazioni</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="negozio.html">Negozio</a>
+                    <a class="nav-link" href="negozio.jsp">Negozio</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="crediti.html">Crediti</a>
+                    <a class="nav-link" href="crediti.jsp">Crediti</a>
                 </li>
             </ul>
         </div>
@@ -88,21 +102,13 @@
     </div>
     <!-- Il nostro content -->
     <div id="mainContent">
-
+        <%
+            // Invalidiamo la sessione per avverarla
+            session.invalidate();
+        %>
         <div style="text-align: center" id="form">
-            <h1 id="titolo">Login</h1>
-            <form>
-                <div class="form-group">
-                    <label for="nome">Nome</label>
-                    <input type="email" class="form-control" id="nome" name="password" aria-describedby="nome">
-                </div>
-                <div class="form-group">
-                    <label for="password">Password</label>
-                    <input type="password" class="form-control" id="password" name="password" aria-describedby="password">
-                </div>
-                <button type="submit" class="btn btn-primary">Login</button>
-                <button type="submit" class="btn btn-primary">Demo Login</button>
-            </form>
+            <h1 id="titolo">Logout</h1>
+            Logout avvenuto con successo
         </div>
 
     </div>

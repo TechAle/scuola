@@ -51,6 +51,7 @@ html, body {
 /* Padding for the nav */
 #padding-header {
     height: 81px;
+    min-height: 81px;
 }
 
 /* Main Content CSS */

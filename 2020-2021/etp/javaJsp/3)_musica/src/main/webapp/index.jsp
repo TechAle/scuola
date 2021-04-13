@@ -1,3 +1,17 @@
+<!--
+    File: index.jsp
+
+    Autore: Alessandro Condello
+    Ultima modifica: 13/04/2021
+-->
+<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<%@ page import="com.example.musica.Carrello" %>
+<%
+    HttpSession sessions = request.getSession(false);
+    String id = (String) sessions.getAttribute("id");
+    Carrello zip = (Carrello) sessions.getAttribute("zip");
+    Boolean isDemo = (Boolean) sessions.getAttribute("demo");
+%>
 <!DOCTYPE html>
 <html lang="it">
 <head>
@@ -161,7 +175,12 @@
             color: white;
             text-align: center;
         }
-
+        /* Add the padding when med col */
+        @media (max-width: 992px) {
+            #pad {
+                display: none !important;
+            }
+        }
     </style>
 </head>
 <body>
@@ -172,30 +191,33 @@
 </video>
 <!-- Navigation Bar -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark position-absolute " id="nav">
-
+    <!-- Vai al top -->
     <div class="container" id="top">
-        <a class="navbar-brand" id="logo" href="#">
+        <!-- Immagine -->
+        <a class="navbar-brand" id="logo" href="index.jsp">
             <img src="./logo/logo.png" alt="MusicBox logo" id="logoSmall">        </a>
+        <!-- Toggle per mobile -->
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
+        <!-- NavBar -->
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="index.html">Home
+                    <a class="nav-link" href="index.jsp">Home
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="login.html">Login / Logout</a>
+                    <a class="nav-link" href="<%= id == null ? "login.jsp" : "logout.jsp" %>"><%= id == null ? "Login" : "Logout" %></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="informazioni.html">Informazioni</a>
+                    <a class="nav-link" href="informazioni.jsp">Informazioni</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="negozio.html">Negozio</a>
+                    <a class="nav-link" href="negozio.jsp">Negozio</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="crediti.html">Crediti</a>
+                    <a class="nav-link" href="crediti.jsp">Crediti</a>
                 </li>
             </ul>
         </div>
@@ -260,17 +282,32 @@
                     screen piccolo, ognuno una nuova linea
                  -->
                 <div class="col-sm-12 col-md-6 col-lg-3">
-                    <a href="login.html" class="btn btn-outline">Login / Logout</a>
+                    <a href="<%= id == null ? "login.jsp" : "logout.jsp" %>" class="btn btn-outline"><%= id == null ? "Login" : "Logout" %></a>
                 </div>
                 <div class="col-sm-12 col-md-6 col-lg-3">
-                    <a href="informazioni.html" class="btn btn-outline">Informazioni</a>
+                    <a href="informazioni.jsp" class="btn btn-outline">Informazioni</a>
                 </div>
                 <div class="col-sm-12 col-md-6 col-lg-3">
-                    <a href="negozio.html" class="btn btn-outline">Negozio</a>
+                    <a href="negozio.jsp" class="btn btn-outline">Negozio</a>
                 </div>
                 <div class="col-sm-12 col-md-6 col-lg-3">
-                    <a href="crediti.html" class="btn btn-outline">Crediti</a>
+                    <a href="crediti.jsp" class="btn btn-outline">Crediti</a>
                 </div>
+                <%=
+                    // Se è demo, aggiungi il pulsante reset password
+                    isDemo == null ? "" :
+                    "<div class=\"col-sm-12 col-md-6 col-lg-3\">\n" +
+                            "                    <a href=\"reset.jsp\" class=\"btn btn-outline\">Reset</a>\n" +
+                            "                </div>"
+                %>
+
+                <%=
+                // Se abbiamo comprato, mostra il pulsante "download". Aggiungiamo un div per il padding per una migliore grafica
+                zip == null ? "" :
+                                "                <div class=\"col-md-6\" id=\"pad\"></div><div class=\"col-sm-12 col-md-6 col-lg-3\">\n" +
+                                "                    <a href=\"zip\" class=\"btn btn-outline\">Scarica</a>\n" +
+                                "                </div>"
+                %>
             </div>
         </div>
     </div>
