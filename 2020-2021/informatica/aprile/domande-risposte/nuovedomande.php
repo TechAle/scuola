@@ -8,7 +8,7 @@
         <div class="row">
             <div class="col-md-8 col-md-offset-2 animate-box">
                 <h2>Nuova domanda</h2>
-                <form action="domanda" method="post">
+                <form action="domandaServlet.php" method="post">
                     <div class="row form-group">
                         <div class="col-md-12">
                             <input type="text" maxlength="100" id="domanda" name="domanda" class="form-control"

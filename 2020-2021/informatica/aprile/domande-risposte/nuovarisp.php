@@ -34,7 +34,7 @@ if ($row = $ris->fetch_row()) {
             <div class="row">
                 <div class="col-md-10 col-md-offset-1 animate-box">
                     <h2>Nuova risposta</h2>
-                    <form action="risposta" method="post" enctype = "multipart/form-data">
+                    <form action="RispostaServlet.php" method="post" enctype = "multipart/form-data">
                         <input type="hidden" name="codice" value="<%= codice %>" />
                         <div class="row form-group">
                             <div class="col-md-12">
