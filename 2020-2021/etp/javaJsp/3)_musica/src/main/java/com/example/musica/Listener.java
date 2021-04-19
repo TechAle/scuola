@@ -23,7 +23,7 @@ public class Listener implements ServletContextListener, HttpSessionListener, Ht
         /* This method is called when the servlet context is initialized(when the Web application is deployed). */
         DbUtility dbu = new DbUtility();
         dbu.setDevCredentials("jdbc:mariadb://localhost:3306/db11465", "root", "");
-        dbu.setProdCredentials("jdbc:mysql://localhost:3306/db11465", "db11465", "");
+        dbu.setProdCredentials("jdbc:mysql://localhost:3306/db11465", "db11465", "XuQkqWa7");
         ServletContext ctx = sce.getServletContext();
         ctx.setAttribute("dbUtility", dbu);
     }
