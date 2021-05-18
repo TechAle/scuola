@@ -1,0 +1,7 @@
+C:\Users\thega\source\repos\equazioni\equazioni_console\bin\Debug\equazioni_console.exe.config
+C:\Users\thega\source\repos\equazioni\equazioni_console\bin\Debug\equazioni_console.exe
+C:\Users\thega\source\repos\equazioni\equazioni_console\bin\Debug\equazioni_console.pdb
+C:\Users\thega\source\repos\equazioni\equazioni_console\obj\Debug\equazioni_console.csprojAssemblyReference.cache
+C:\Users\thega\source\repos\equazioni\equazioni_console\obj\Debug\equazioni_console.csproj.CoreCompileInputs.cache
+C:\Users\thega\source\repos\equazioni\equazioni_console\obj\Debug\equazioni_console.exe
+C:\Users\thega\source\repos\equazioni\equazioni_console\obj\Debug\equazioni_console.pdb

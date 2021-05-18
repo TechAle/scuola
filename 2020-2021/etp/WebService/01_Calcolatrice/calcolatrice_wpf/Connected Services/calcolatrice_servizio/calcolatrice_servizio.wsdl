@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="SommaNumeri">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Primo" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="Secondo" type="s:double" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SommaNumeriResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SommaNumeriResult" type="s:double" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SottraiNumeri">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Primo" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="Secondo" type="s:double" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SottraiNumeriResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SottraiNumeriResult" type="s:double" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MoltiplicaNumeri">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Primo" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="Secondo" type="s:double" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MoltiplicaNumeriResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="MoltiplicaNumeriResult" type="s:double" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DividiNumeri">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="primo" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="secondo" type="s:double" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DividiNumeriResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DividiNumeriResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="SommaNumeriSoapIn">
+    <wsdl:part name="parameters" element="tns:SommaNumeri" />
+  </wsdl:message>
+  <wsdl:message name="SommaNumeriSoapOut">
+    <wsdl:part name="parameters" element="tns:SommaNumeriResponse" />
+  </wsdl:message>
+  <wsdl:message name="SottraiNumeriSoapIn">
+    <wsdl:part name="parameters" element="tns:SottraiNumeri" />
+  </wsdl:message>
+  <wsdl:message name="SottraiNumeriSoapOut">
+    <wsdl:part name="parameters" element="tns:SottraiNumeriResponse" />
+  </wsdl:message>
+  <wsdl:message name="MoltiplicaNumeriSoapIn">
+    <wsdl:part name="parameters" element="tns:MoltiplicaNumeri" />
+  </wsdl:message>
+  <wsdl:message name="MoltiplicaNumeriSoapOut">
+    <wsdl:part name="parameters" element="tns:MoltiplicaNumeriResponse" />
+  </wsdl:message>
+  <wsdl:message name="DividiNumeriSoapIn">
+    <wsdl:part name="parameters" element="tns:DividiNumeri" />
+  </wsdl:message>
+  <wsdl:message name="DividiNumeriSoapOut">
+    <wsdl:part name="parameters" element="tns:DividiNumeriResponse" />
+  </wsdl:message>
+  <wsdl:portType name="calcolatrice_servizioSoap">
+    <wsdl:operation name="SommaNumeri">
+      <wsdl:input message="tns:SommaNumeriSoapIn" />
+      <wsdl:output message="tns:SommaNumeriSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SottraiNumeri">
+      <wsdl:input message="tns:SottraiNumeriSoapIn" />
+      <wsdl:output message="tns:SottraiNumeriSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MoltiplicaNumeri">
+      <wsdl:input message="tns:MoltiplicaNumeriSoapIn" />
+      <wsdl:output message="tns:MoltiplicaNumeriSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DividiNumeri">
+      <wsdl:input message="tns:DividiNumeriSoapIn" />
+      <wsdl:output message="tns:DividiNumeriSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="calcolatrice_servizioSoap" type="tns:calcolatrice_servizioSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="SommaNumeri">
+      <soap:operation soapAction="http://tempuri.org/SommaNumeri" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SottraiNumeri">
+      <soap:operation soapAction="http://tempuri.org/SottraiNumeri" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MoltiplicaNumeri">
+      <soap:operation soapAction="http://tempuri.org/MoltiplicaNumeri" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DividiNumeri">
+      <soap:operation soapAction="http://tempuri.org/DividiNumeri" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="calcolatrice_servizioSoap12" type="tns:calcolatrice_servizioSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="SommaNumeri">
+      <soap12:operation soapAction="http://tempuri.org/SommaNumeri" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SottraiNumeri">
+      <soap12:operation soapAction="http://tempuri.org/SottraiNumeri" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MoltiplicaNumeri">
+      <soap12:operation soapAction="http://tempuri.org/MoltiplicaNumeri" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DividiNumeri">
+      <soap12:operation soapAction="http://tempuri.org/DividiNumeri" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="calcolatrice_servizio">
+    <wsdl:port name="calcolatrice_servizioSoap" binding="tns:calcolatrice_servizioSoap">
+      <soap:address location="http://localhost:53496/calcolatrice_servizio.asmx" />
+    </wsdl:port>
+    <wsdl:port name="calcolatrice_servizioSoap12" binding="tns:calcolatrice_servizioSoap12">
+      <soap12:address location="http://localhost:53496/calcolatrice_servizio.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,15 @@
+C:\Users\thega\source\repos\web_db\web_wpf\obj\Debug\web_wpf.csprojAssemblyReference.cache
+C:\Users\thega\source\repos\web_db\web_wpf\obj\Debug\MainWindow.g.cs
+C:\Users\thega\source\repos\web_db\web_wpf\obj\Debug\App.g.cs
+C:\Users\thega\source\repos\web_db\web_wpf\obj\Debug\web_wpf_MarkupCompile.cache
+C:\Users\thega\source\repos\web_db\web_wpf\obj\Debug\web_wpf_MarkupCompile.lref
+C:\Users\thega\source\repos\web_db\web_wpf\bin\Debug\web_wpf.exe.config
+C:\Users\thega\source\repos\web_db\web_wpf\bin\Debug\web_wpf.exe
+C:\Users\thega\source\repos\web_db\web_wpf\bin\Debug\web_wpf.pdb
+C:\Users\thega\source\repos\web_db\web_wpf\obj\Debug\MainWindow.baml
+C:\Users\thega\source\repos\web_db\web_wpf\obj\Debug\web_wpf.g.resources
+C:\Users\thega\source\repos\web_db\web_wpf\obj\Debug\web_wpf.Properties.Resources.resources
+C:\Users\thega\source\repos\web_db\web_wpf\obj\Debug\web_wpf.csproj.GenerateResource.cache
+C:\Users\thega\source\repos\web_db\web_wpf\obj\Debug\web_wpf.csproj.CoreCompileInputs.cache
+C:\Users\thega\source\repos\web_db\web_wpf\obj\Debug\web_wpf.exe
+C:\Users\thega\source\repos\web_db\web_wpf\obj\Debug\web_wpf.pdb

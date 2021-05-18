@@ -1,0 +1,14 @@
+C:\Users\thega\source\repos\Condello_NuovoControllo_CF\Condello_NuovoControllo_CF\bin\Debug\Condello_NuovoControllo_CF.exe.config
+C:\Users\thega\source\repos\Condello_NuovoControllo_CF\Condello_NuovoControllo_CF\bin\Debug\Condello_NuovoControllo_CF.exe
+C:\Users\thega\source\repos\Condello_NuovoControllo_CF\Condello_NuovoControllo_CF\bin\Debug\Condello_NuovoControllo_CF.pdb
+C:\Users\thega\source\repos\Condello_NuovoControllo_CF\Condello_NuovoControllo_CF\obj\Debug\MainWindow.g.cs
+C:\Users\thega\source\repos\Condello_NuovoControllo_CF\Condello_NuovoControllo_CF\obj\Debug\App.g.cs
+C:\Users\thega\source\repos\Condello_NuovoControllo_CF\Condello_NuovoControllo_CF\obj\Debug\Condello_NuovoControllo_CF_MarkupCompile.cache
+C:\Users\thega\source\repos\Condello_NuovoControllo_CF\Condello_NuovoControllo_CF\obj\Debug\Condello_NuovoControllo_CF_MarkupCompile.lref
+C:\Users\thega\source\repos\Condello_NuovoControllo_CF\Condello_NuovoControllo_CF\obj\Debug\MainWindow.baml
+C:\Users\thega\source\repos\Condello_NuovoControllo_CF\Condello_NuovoControllo_CF\obj\Debug\Condello_NuovoControllo_CF.g.resources
+C:\Users\thega\source\repos\Condello_NuovoControllo_CF\Condello_NuovoControllo_CF\obj\Debug\Condello_NuovoControllo_CF.Properties.Resources.resources
+C:\Users\thega\source\repos\Condello_NuovoControllo_CF\Condello_NuovoControllo_CF\obj\Debug\Condello_NuovoControllo_CF.csproj.GenerateResource.cache
+C:\Users\thega\source\repos\Condello_NuovoControllo_CF\Condello_NuovoControllo_CF\obj\Debug\Condello_NuovoControllo_CF.csproj.CoreCompileInputs.cache
+C:\Users\thega\source\repos\Condello_NuovoControllo_CF\Condello_NuovoControllo_CF\obj\Debug\Condello_NuovoControllo_CF.exe
+C:\Users\thega\source\repos\Condello_NuovoControllo_CF\Condello_NuovoControllo_CF\obj\Debug\Condello_NuovoControllo_CF.pdb

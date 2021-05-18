@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="equazione">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="a" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="b" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="c" type="s:double" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="equazioneResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="equazioneResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="equazioneSoapIn">
+    <wsdl:part name="parameters" element="tns:equazione" />
+  </wsdl:message>
+  <wsdl:message name="equazioneSoapOut">
+    <wsdl:part name="parameters" element="tns:equazioneResponse" />
+  </wsdl:message>
+  <wsdl:portType name="equazioni_servizioSoap">
+    <wsdl:operation name="equazione">
+      <wsdl:input message="tns:equazioneSoapIn" />
+      <wsdl:output message="tns:equazioneSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="equazioni_servizioSoap" type="tns:equazioni_servizioSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="equazione">
+      <soap:operation soapAction="http://tempuri.org/equazione" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="equazioni_servizioSoap12" type="tns:equazioni_servizioSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="equazione">
+      <soap12:operation soapAction="http://tempuri.org/equazione" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="equazioni_servizio">
+    <wsdl:port name="equazioni_servizioSoap" binding="tns:equazioni_servizioSoap">
+      <soap:address location="http://localhost:53387/equazioni_servizio.asmx" />
+    </wsdl:port>
+    <wsdl:port name="equazioni_servizioSoap12" binding="tns:equazioni_servizioSoap12">
+      <soap12:address location="http://localhost:53387/equazioni_servizio.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

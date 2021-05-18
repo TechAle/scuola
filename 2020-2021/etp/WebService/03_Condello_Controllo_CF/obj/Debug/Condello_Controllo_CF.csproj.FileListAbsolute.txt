@@ -1,0 +1,15 @@
+C:\Users\thega\source\repos\Condello_Controllo_CF\Condello_Controllo_CF\bin\Debug\Condello_Controllo_CF.exe.config
+C:\Users\thega\source\repos\Condello_Controllo_CF\Condello_Controllo_CF\bin\Debug\Condello_Controllo_CF.exe
+C:\Users\thega\source\repos\Condello_Controllo_CF\Condello_Controllo_CF\bin\Debug\Condello_Controllo_CF.pdb
+C:\Users\thega\source\repos\Condello_Controllo_CF\Condello_Controllo_CF\obj\Debug\Condello_Controllo_CF.csprojAssemblyReference.cache
+C:\Users\thega\source\repos\Condello_Controllo_CF\Condello_Controllo_CF\obj\Debug\MainWindow.g.cs
+C:\Users\thega\source\repos\Condello_Controllo_CF\Condello_Controllo_CF\obj\Debug\App.g.cs
+C:\Users\thega\source\repos\Condello_Controllo_CF\Condello_Controllo_CF\obj\Debug\Condello_Controllo_CF_MarkupCompile.cache
+C:\Users\thega\source\repos\Condello_Controllo_CF\Condello_Controllo_CF\obj\Debug\Condello_Controllo_CF_MarkupCompile.lref
+C:\Users\thega\source\repos\Condello_Controllo_CF\Condello_Controllo_CF\obj\Debug\MainWindow.baml
+C:\Users\thega\source\repos\Condello_Controllo_CF\Condello_Controllo_CF\obj\Debug\Condello_Controllo_CF.g.resources
+C:\Users\thega\source\repos\Condello_Controllo_CF\Condello_Controllo_CF\obj\Debug\Condello_Controllo_CF.Properties.Resources.resources
+C:\Users\thega\source\repos\Condello_Controllo_CF\Condello_Controllo_CF\obj\Debug\Condello_Controllo_CF.csproj.GenerateResource.cache
+C:\Users\thega\source\repos\Condello_Controllo_CF\Condello_Controllo_CF\obj\Debug\Condello_Controllo_CF.csproj.CoreCompileInputs.cache
+C:\Users\thega\source\repos\Condello_Controllo_CF\Condello_Controllo_CF\obj\Debug\Condello_Controllo_CF.exe
+C:\Users\thega\source\repos\Condello_Controllo_CF\Condello_Controllo_CF\obj\Debug\Condello_Controllo_CF.pdb
