@@ -1,0 +1,480 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- MetaData -->
+
+
+  <!-- Better mobile -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>GameSense</title>
+  <!-- BootStrap -->
+  <link rel="stylesheet" href="./dependences/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="./dependences/jquery.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <!-- BootStrap things again -->
+  <script src="./dependences/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="./dependences/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <!-- Page Css -->
+  <style>
+
+
+    /* Html Body normal css */
+    html, body {
+      margin: 0 !important;
+      padding: 0 !important;
+      scroll-behavior: smooth;
+      height: 100vh;
+      background-color: white;
+    }
+
+    /* Nav Things */
+    #top {
+      margin-left: 0 !important;
+      margin-right: 0 !important;
+      width: 100%;
+      max-width: 100%;
+      height: 20%;
+      margin-top: 0 !important;;
+    }
+
+    @keyframes rainbow {
+      0% {
+        filter: invert(50%) sepia(100%) saturate(1000%) hue-rotate(100deg) brightness(102%) contrast(102%);
+        transform: rotate(0deg);
+      }
+      100% {
+        filter: invert(50%) sepia(50%) saturate(1000%) hue-rotate(200deg) brightness(102%) contrast(102%);
+        transform: rotate(360deg);
+      }
+    }
+
+    /* Logo sizes */
+    #logoSmall {
+      height: 50px;
+      width: 80px;
+      animation: rainbow 2s infinite;
+      animation-direction: alternate-reverse;
+    }
+
+    /* Inside nav */
+    #nav {
+      background-color: blue !important;
+      border-bottom: solid #ececec 0px;
+      width: 100%;
+      z-index: 2;
+    }
+
+    /* Add line when we press the button in small screen */
+    @media (max-width: 988px) {
+      #navbarResponsive {
+        border-top: 1px #acacac solid;
+        margin-top: 8px;
+      }
+    }
+
+    /* Main Content, we use display: Flex and flex-flow: column for making the actual content
+       full size
+     */
+    #content {
+      height: 100%;
+      display: flex;
+      flex-flow: column;
+
+    }
+
+
+    /* Padding for the nav */
+    #padding-header {
+      min-height: 100px;
+    }
+
+    .nav-link {
+      color: white !important;
+    }
+
+    .custom-toggler.navbar-toggler {
+      border-color: transparent;
+    }
+    /* Setting the stroke to green using rgb values (0, 128, 0) */
+
+    .custom-toggler .navbar-toggler-icon {
+      background-image: url(
+      "data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 1)' stroke-width='3' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+    }
+
+  </style>
+</head>
+<body>
+
+
+
+<!-- Navigation Bar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark position-absolute " id="nav">
+
+  <div class="container" id="top">
+    <a class="navbar-brand" id="logo" href="#">
+      <img src="./img/logo.svg" alt="Belle Foto srl logo" id="logoSmall"> Belle Foto srl       </a>
+
+    <button class="navbar-toggler ml-auto custom-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarResponsive"
+            aria-controls="navbarResponsive"
+            aria-expanded="false"
+            aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="home.html">Home
+          </a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="utente.html">Utente
+          </a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="messaggi.html">Messaggi
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="crediti_LOGIN.html">Crediti</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="FAQ_LOGIN.html">FAQ</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="terms_LOGIn.html">Terms</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contacts_LOGIN.html">Contacts</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="admin.html">Admin
+          </a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="login.html">Logout
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<style>
+  #body {
+    height: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+  .btn-outline-primary:hover {
+    color: blue;
+  }
+  .btn-outline-primary {
+    color: blue;
+  }
+  #form-ricerca {
+    margin-bottom: 10px;
+  }
+
+  .table-dark {
+    overflow-x: hidden;
+    max-width: 100%;
+    margin-bottom: 80px;
+  }
+
+
+</style>
+
+<style>
+  .scelte {
+    background-color: #005eff;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    text-align: center;
+    padding-right: 5px;
+    color: white;
+    margin-bottom: 10px;
+  }
+  #loginScelta {
+    height: 75px;
+  }
+  #registrazioneScelta {
+    height: 125px;
+  }
+  .popover {
+    display: none;
+  }
+  .popover {
+    display: none;
+  }
+  .Titolo {
+    text-align: center;
+    padding-top: 10px;
+    font-size: 75px;
+    margin-bottom: 0;
+  }
+  .loginReg {
+    height: 100%;
+
+  }
+  .cointainerForm {
+    height: 70%;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  .sottoTitolo {
+    text-align: center;
+    font-size: 30px;
+  }
+
+  form{
+    padding: 0 2em;
+  }
+  .form__input{
+    width: 100%;
+    border:0px solid transparent;
+    border-radius: 0;
+    border-bottom: 1px solid #aaa;
+    padding: 1em .5em .5em;
+    padding-left: 2em;
+    outline:none;
+    margin:1.5em auto;
+    transition: all .5s ease;
+  }
+  .form__input:focus{
+    border-bottom-color: #005eff;
+    box-shadow: 0 0 5px rgba(0,80,80,.4);
+    border-radius: 4px;
+  }
+  .btn{
+    transition: all .5s ease;
+    width: 70%;
+    border-radius: 30px;
+    color:#005eff;
+    font-weight: 600;
+    background-color: #fff;
+    border: 1px solid #005eff;
+    margin-top: 1.5em;
+    margin-bottom: 1em;
+  }
+  .btn:hover, .btn:focus{
+    background-color: #005eff;
+    color:#fff;
+  }
+
+  @keyframes fadeout {
+    from { opacity: 1; }
+    to   { opacity: 0; }
+  }
+
+  /* Firefox < 16 */
+  @-moz-keyframes fadeout {
+    from { opacity: 1; }
+    to   { opacity: 0; }
+  }
+
+  /* Safari, Chrome and Opera > 12.1 */
+  @-webkit-keyframes fadeout {
+    from { opacity: 1; }
+    to   { opacity: 0; }
+  }
+
+  /* Internet Explorer */
+  @-ms-keyframes fadeout {
+    from { opacity: 1; }
+    to   { opacity: 0; }
+  }
+
+  /* Opera < 12.1 */
+  @-o-keyframes fadeout {
+    from { opacity: 1; }
+    to   { opacity: 0; }
+  }
+
+
+  /* Fadin */
+  @keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+  }
+
+  /* Firefox < 16 */
+  @-moz-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+  }
+
+  /* Safari, Chrome and Opera > 12.1 */
+  @-webkit-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+  }
+
+  /* Internet Explorer */
+  @-ms-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+  }
+
+  /* Opera < 12.1 */
+  @-o-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+  }
+
+  .regReg {
+    display: none;
+    overflow-y: scroll;
+  }
+  .container{
+    margin-top:20px;
+  }
+  .image-preview-input {
+    position: relative;
+    overflow: hidden;
+    margin: 0px;
+    color: #333;
+    background-color: #fff;
+    border-color: #ccc;
+  }
+  .image-preview-input input[type=file] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    cursor: pointer;
+    opacity: 0;
+    filter: alpha(opacity=0);
+  }
+  .image-preview-input-title {
+    margin-left:2px;
+  }
+  #dynamic {
+    width: 100px;
+  }
+
+</style>
+<div id="content">
+  <!-- Since we have an header that is absolute, we have to simulate his height, and we'll do this is a padding  -->
+  <div id="padding-header">
+  </div>
+  <div id="body" class="container">
+    <div class="col-12" style="background-color: lightgray;">
+
+      <div class="row">
+        <table class="table table-bordered table-dark">
+          <tbody>
+          <tr>
+            <td colspan="3" style="text-align: center">Carica Foto</td>
+          </tr>
+          <tr>
+            <td colspan="3">
+              <form>
+                  <input id="inputFile" type="file" class="form-control image-preview-filename" >
+                <center>
+                  Descrizione
+                </center>
+                  <input type="text" style="width: 100%; height: 50px">
+                <center>
+                  <input type="submit" class="btn-outline-info" value="Carica">
+                </center>
+              </form>
+            </td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="row">
+        <table class="table table-bordered table-dark">
+          <tbody>
+          <tr>
+            <td colspan="3" style="text-align: center">Rimuovi Foto</td>
+          </tr>
+          <tr>
+            <td colspan="3">
+              <form>
+                <center>
+                <input type="checkbox" name="checkbox"> aa.png<br>
+                <input type="checkbox" name="checkbox"> bb.png<br><br>
+                </center>
+                <center>
+                  <input type="submit" class="btn-outline-info" value="Carica">
+                </center>
+              </form>
+            </td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="row">
+        <table class="table table-bordered table-dark">
+          <tbody>
+          <tr>
+            <td colspan="3" style="text-align: center">Modifica Descrizione</td>
+          </tr>
+          <tr>
+            <td colspan="3">
+              <form>
+                <center>
+                  <input type="checkbox" name="checkbox"> aa.png<br>
+                  <input type="checkbox" name="checkbox"> bb.png<br><br>
+                </center>
+                <center>
+                  Descrizione
+                </center>
+                <input type="text" style="width: 100%; height: 50px">
+                <center>
+                  <input type="submit" class="btn-outline-info" value="Carica">
+                </center>
+              </form>
+            </td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+      <style>
+        td {
+          text-align: center;
+        }
+      </style>
+      <div class="row">
+        <table class="table table-bordered table-dark ">
+          <thead>
+            <tr>
+              <td>Immagine</td>
+              <td>Nome Immagine</td>
+              <td>Descrizione</td>
+            </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <td colspan="3" style="text-align: center">Le mie foto</td>
+          </tr>
+          <tr>
+            <td><center>
+              <img src="./img/background.png" style="height: 100px ">
+            </center></td>
+            <td>aaa.png</td>
+            <td>ciao</td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+</body>
+</html>

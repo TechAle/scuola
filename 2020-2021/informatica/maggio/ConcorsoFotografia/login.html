@@ -3,18 +3,18 @@
 <html lang="en">
 <head>
     <!-- MetaData -->
-
+    <link rel="shortcut icon" type="image/x-icon" href="./img/logo.svg">
 
     <!-- Better mobile -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>GameSense</title>
+    <title>Belle Foto srl - Login</title>
     <!-- BootStrap -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./dependences/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="./dependences/jquery.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <!-- BootStrap things again -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="./dependences/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="./dependences/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <!-- Page Css -->
     <link rel="stylesheet" href="./css/main.css" >
     <style>
@@ -89,7 +89,7 @@
 
         /* Padding for the nav */
         #padding-header {
-            height: 76px;
+            min-height: 76px;
         }
 
         /* Main Content CSS */
@@ -187,26 +187,20 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="index.html">Home
+                    <a class="nav-link" href="#">Login
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="showcase.html">ShowCase</a>
+                    <a class="nav-link" href="crediti.html">Crediti</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Download</a>
+                    <a class="nav-link" href="FAQ.html">FAQ</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Developers</a>
+                    <a class="nav-link" href="terms.html">Terms</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">FAQ</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Configs</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Contacts</a>
+                    <a class="nav-link" href="contacts.html">Contacts</a>
                 </li>
             </ul>
         </div>
@@ -235,14 +229,12 @@
                 height: 70%;
                 margin-left: 20px;
                 margin-right: 20px;
-                overflow-x: hidden;
-                overflow-y: scroll;
             }
             .sottoTitolo {
                 text-align: center;
                 font-size: 30px;
             }
-            
+
             form{
                 padding: 0 2em;
             }
@@ -338,8 +330,9 @@
                 to   { opacity: 1; }
             }
 
-            .loginReg {
+            .regReg {
                 display: none;
+                overflow-y: scroll;
             }
             .container{
                 margin-top:20px;
@@ -397,6 +390,9 @@
                                     <input type="checkbox" name="remember_me" id="remember_meLogin" class="">
                                     <label for="remember_meLogin">Remember Me!</label>
                                 </div>
+                                <div class="remember">
+                                    <a href="token.html">Primo login? Clicca qui!</a>
+                                </div>
                                     <input type="submit" value="Submit" class="btn">
                             </center>
                         </form>
@@ -404,7 +400,7 @@
                 </div>
                 <div class="regReg">
                     <h1 class="Titolo">Benvenuto</h1>
-                    <form control="" class="form-group">
+                    <form control="" class="form-group" style="height: 90%; overflow-y: scroll">
                         <div class="row">
                             <input type="text" name="Email" id="Email" class="form__input" placeholder="Email">
                         </div>
@@ -421,7 +417,11 @@
                             <input type="password" name="password" id="password" class="form__input" placeholder="Password">
                         </div>
                         <div class="row">
-                            <div class="col-sm-12">
+                            <!-- <span class="fa fa-lock"></span> -->
+                            <input type="password" name="passwordConferma" id="passwordConferma" class="form__input" placeholder="Conferma Password">
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12" id="divInput">
                                 <!-- image-preview-filename input [CUT FROM HERE]-->
                                 <div class="input-group image-preview">
                                     <input id="inputFile" type="text" class="form-control image-preview-filename" disabled="disabled"> <!-- don't give a name === doesn't send on POST/GET -->
@@ -447,36 +447,33 @@
             <script>
                 var display = "login";
                 document.getElementById("registrazioneScelta").addEventListener("click", () => {
-                    if (display !== "registrazione") {
-                        document.getElementsByClassName("loginReg")[0].style.animation = "fadeout 2s forwards";
-                        display = "registrazione";
-
-                        setTimeout(() => {
-                            document.getElementsByClassName("regReg")[0].style.animation = "fadein 2s forwards";
-                            document.getElementsByClassName("regReg")[0].style.display = "initial";
-                            document.getElementsByClassName("loginReg")[0].style.display = "none"
-                        }, 2000)
-
-                    }
+                    display = "registrazione";
+                    document.getElementsByClassName("regReg")[0].style.display = "initial";
+                    document.getElementsByClassName("loginReg")[0].style.display = "none"
                 });
                 document.getElementById("loginScelta").addEventListener("click", () => {
                     if (display !== "login") {
-                        document.getElementsByClassName("regReg")[0].style.animation = "fadeout 2s forwards";
                         display = "login";
-
-                        setTimeout(() => {
-                            document.getElementsByClassName("loginReg")[0].style.animation = "fadein 2s forwards";
-                            document.getElementsByClassName("loginReg")[0].style.display = "initial";
-                            document.getElementsByClassName("regReg")[0].style.display = "none"
-                        }, 2000)
-
+                        document.getElementsByClassName("loginReg")[0].style.display = "initial";
+                        document.getElementsByClassName("regReg")[0].style.display = "none";
                     }
                 });
 
-                $("#inputFile").addEventListener("mouseover", () => {
-                    var all = document.getElementsByClassName('someClass');
-
-                })
+                var item = document.getElementById("divInput");
+                item.addEventListener("mouseover", () => {
+                    //alert("dentro")
+                    var all = document.getElementsByClassName('popover');
+                    for (var i = 0; i < all.length; i++) {
+                        all[i].style.display = 'initial';
+                    }
+                }, false);
+                item.addEventListener("mouseout", () => {
+                    //alert("fuori")
+                    var all = document.getElementsByClassName('popover');
+                    for (var i = 0; i < all.length; i++) {
+                        all[i].style.display = 'none';
+                    }
+                }, false);
 
                 $(function() {
 
